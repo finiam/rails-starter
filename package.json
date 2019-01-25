@@ -26,7 +26,8 @@
     "react-dom": "^16.7.0",
     "react-hot-loader": "^4.6.3",
     "style-loader": "^0.23.1",
-    "turbolinks": "^5.2.0"
+    "turbolinks": "^5.2.0",
+    "upgrade": "^1.1.0"
   },
   "version": "0.1.0",
   "devDependencies": {

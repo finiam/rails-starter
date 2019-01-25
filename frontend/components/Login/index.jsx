@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { login } from "../../api/auth";
 
-export default class componentName extends Component {
+export default class Login extends Component {
   handleInputChange = event => {
     const {
       target: { name, value }
@@ -19,8 +19,6 @@ export default class componentName extends Component {
 
     try {
       await login(email, password);
-
-      window.location.reload();
     } catch (error) {
       console.error(error); // eslint-disable-line
     }
