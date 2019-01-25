@@ -1,6 +1,10 @@
 {
   "name": "railsstarter",
   "private": true,
+  "scripts": {
+    "lint": "eslint --ext js,jsx frontend/**/*",
+    "lint-styles": "stylelint frontend/**/*"
+  },
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.3.0",
     "@babel/preset-react": "^7.0.0",
@@ -24,6 +28,17 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.6.0",
+    "eslint-plugin-import": "^2.15.0",
+    "eslint-plugin-jsx-a11y": "^6.2.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "stylelint": "^9.10.1",
+    "stylelint-config-prettier": "^4.0.0",
+    "stylelint-order": "^2.0.0",
     "webpack-dev-server": "^3.1.14"
   }
 }
