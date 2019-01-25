@@ -7,19 +7,13 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require "spec_helper"
 require "rspec/rails"
 require "capybara/rails"
-# require "clearance/rspec"
+require "clearance/rspec"
 require "selenium/webdriver"
 require "database_cleaner"
 
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 
 ActiveRecord::Migration.maintain_test_schema!
-
-Rails.application.config do
-  # config.middleware.use Clearance::BackDoor do |external_id|
-  # Clearance.configuration.user_model.find_by(external_id: external_id)
-  # end
-end
 
 RSpec.configure do |config|
   config.verbose_retry = true

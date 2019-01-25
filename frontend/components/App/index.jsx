@@ -14,7 +14,7 @@ export default class App extends Component {
         <p>Hello World!</p>
 
         <button type="button" onClick={this.handleLogoutClick}>
-          Logout!
+          Logout
         </button>
       </div>
     );
