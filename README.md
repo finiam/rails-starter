@@ -1,24 +1,10 @@
-# README
+# SVHealth Rails Starter
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails 6 starter with Webpack and React setup.
 
-Things you may want to cover:
+Features:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* PostCSS modules via the `styleName` prop. Also includes CSS separation during production phase, splitting all CSS to a separate bundle
+* RSpec, FactoryBot and Faker integration
+* Headless integration test with Chromedriver and Capybara
+* User authentication via session. Includes seperate entry points for the logged in app and logged out via the `application` and `signed_out` packs

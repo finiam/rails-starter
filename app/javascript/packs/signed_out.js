@@ -1,8 +1,8 @@
 import "babel-polyfill";
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "root/components/App";
+import Login from "root/components/Login";
 
 document.addEventListener("DOMContentLoaded", () => {
-  ReactDOM.render(<App />, document.getElementById("app"));
+  ReactDOM.render(<Login />, document.getElementById("app"));
 });
