@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { Component, lazy, Suspense } from "react";
+import { logout } from "root/api/auth";
 
-import "./index.css";
-import { logout } from "../../api/auth";
+const HelloWorld = lazy(() => import("root/components/HelloWorld"));
 
 export default class App extends Component {
   handleLogoutClick = () => {
@@ -10,13 +10,13 @@ export default class App extends Component {
 
   render() {
     return (
-      <div styleName="root">
-        <p>Hello World!</p>
+      <Suspense fallback={<div />}>
+        <HelloWorld />
 
         <button type="button" onClick={this.handleLogoutClick}>
           Logout
         </button>
-      </div>
+      </Suspense>
     );
   }
 }

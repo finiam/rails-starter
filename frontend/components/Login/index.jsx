@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { login } from "../../api/auth";
+import { login } from "root/api/auth";
 
 export default class Login extends Component {
   handleInputChange = event => {
