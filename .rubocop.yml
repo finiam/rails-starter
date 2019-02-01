@@ -4,10 +4,10 @@ AllCops:
     - "**/config.ru"
     - "app/**/*.rb"
     - "spec/**/*.rb"
+    - "config/**/*.rb"
     - "Gemfile"
   Exclude:
     - "db/**/*"
-    - "config/**/*"
     - "script/**/*"
     - "bin/**/*"
     - "vendor/**/*"
