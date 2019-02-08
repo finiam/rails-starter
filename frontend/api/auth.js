@@ -9,7 +9,9 @@ if (document.getElementsByName("csrf-token")[0]) {
 axios.defaults.headers["X-CSRF-Token"] = token;
 
 export async function login(email, password) {
-  const response = await axios.post("/session", { session: { identifier: email, password } });
+  const response = await axios.post("/session", {
+    session: { identifier: email, password }
+  });
 
   window.location.reload();
 

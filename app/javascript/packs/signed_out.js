@@ -1,8 +1,9 @@
-import "babel-polyfill";
 import React from "react";
 import ReactDOM from "react-dom";
 import { hot } from "react-hot-loader";
 import Login from "root/components/Login";
+
+require("turbolinks").start();
 
 const HotLogin = hot(module)(Login);
 
