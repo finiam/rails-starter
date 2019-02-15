@@ -1,14 +1,5 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-const localIdentName = () => {
-  switch (process.env.NODE_ENV) {
-    case "production":
-      return "[hash]";
-    default:
-      return "[folder]__[local]__[hash]";
-  }
-};
-
 module.exports = {
   test: /\.css$/,
   use: [
@@ -20,7 +11,7 @@ module.exports = {
       loader: "css-loader",
       options: {
         modules: true,
-        localIdentName: localIdentName()
+        localIdentName: "[folder]__[local]__[hash]"
       }
     },
     "postcss-loader"

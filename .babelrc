@@ -22,7 +22,7 @@
         [
           "react-css-modules",
           {
-            "generateScopedName": "[hash]"
+            "generateScopedName": "[folder]__[local]__[hash]"
           }
         ]
       ]
