@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "2.5.3"
+ruby "2.6.1"
 
 gem "bootsnap", ">= 1.1.0", require: false
 gem "clearance"
