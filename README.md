@@ -40,6 +40,6 @@ We use React as our UI framework, but that can be replaced if need be. With our 
 
 # About
 
-Oncostats is maintained by [SVHealth](http://svhealth.io).
+This starter kit is maintained by [SVHealth](http://svhealth.io).
 
 If you need to contact the maintainer use or <a href="mailto:contact@svhealth.io">reach out to us</a> if you don't have access.
