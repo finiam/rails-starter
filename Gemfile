@@ -3,11 +3,13 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "2.6.1"
 
+gem "administrate"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "clearance"
 gem "pg", ">= 0.18", "< 2.0"
 gem "puma", "~> 3.11"
 gem "rails", "~> 6.0.0.beta3"
+gem "react-rails"
 gem "webpacker", "~> 4.0.2"
 
 group :development, :test do
