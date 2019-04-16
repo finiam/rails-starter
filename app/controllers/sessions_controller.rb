@@ -1,11 +1,11 @@
 class SessionsController < Clearance::SessionsController
-  def new
-    render layout: "signed_out"
-  end
+  def new; end
 
   def create
     sign_in(authenticated_user) do |status|
       if status.success?
+        authenticated_user.update(last_login_ip: request.remote_ip, last_login_at: Time.now)
+
         render json: { redirect_url: url_after_create }
       else
         render json: { error: status.failure_message }, status: :unauthorized

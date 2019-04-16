@@ -1,0 +1,25 @@
+@import "../../styles/reset.css";
+
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+}
+
+.root form {
+  display: flex;
+  flex-direction: column;
+}
+
+.root label {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 1rem;
+}
+
+.root form button {
+  margin-top: 1rem;
+}

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { login } from "root/api/auth";
 
+import "./index.css";
+
 export default class Login extends Component {
   handleInputChange = event => {
     const {
@@ -26,7 +28,7 @@ export default class Login extends Component {
 
   render() {
     return (
-      <div>
+      <div styleName="root">
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="email">
             Email
