@@ -8,7 +8,7 @@ module Admin
         )
       else
         render :edit, locals: {
-          page: Administrate::Page::Form.new(dashboard, requested_resource),
+          page: Administrate::Page::Form.new(dashboard, requested_resource)
         }
       end
     end
