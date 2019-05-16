@@ -46,7 +46,7 @@ We use React as our UI framework, but that can be replaced if need be. With our 
 ## Backend
 The only backend logic present is the user authentication. We created a custom session controller to handle logins and logouts using the Rails Session API.
 
-Administrate is also installed, allowing users with the admin role to create accounts, as user registrations are disabled by default.
+Administrate is also installed, allowing users with the admin role to create accounts, as user registrations are disabled by default. The admin dashboard is present at `/admin`.
 
 ## Testing
 
@@ -57,6 +57,8 @@ Administrate is also installed, allowing users with the admin role to create acc
 # Developing
 
 Run `bin/setup` to get everything up and running. Then `bin/server` to start hammering away at it.
+
+Also don't forget to setup the default admin user with `rake populate:admin_user`. The default credentials are `admin@mail.com`, the password being `foobar`.
 
 `react-hot-loader` should reload everything you need as you edit stuff in the `frontend` folder. On the Rails side, everything is interpreted live, so no need to restart the server every time you change stuff.
 
