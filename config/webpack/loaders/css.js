@@ -11,7 +11,7 @@ module.exports = {
       loader: "css-loader",
       options: {
         modules: true,
-        localIdentName: "[folder]__[local]__[hash]"
+        localIdentName: "[hash:8]_[folder]_[name]_[local]"
       }
     },
     "postcss-loader"

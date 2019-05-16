@@ -18,6 +18,7 @@ group :development, :test do
   gem "faker"
   gem "pry-byebug"
   gem "pry-rails"
+  gem "rb-readline"
   %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
     gem lib, git: "https://github.com/rspec/#{lib}.git", branch: "master"
   end

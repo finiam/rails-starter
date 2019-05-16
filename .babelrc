@@ -23,7 +23,7 @@
         [
           "react-css-modules",
           {
-            "generateScopedName": "[folder]__[local]__[hash]"
+            "generateScopedName": "[hash:8]_[folder]_[name]_[local]"
           }
         ]
       ]
@@ -35,7 +35,7 @@
         [
           "react-css-modules",
           {
-            "generateScopedName": "[folder]__[local]__[hash]"
+            "generateScopedName": "[hash:8]_[folder]_[name]_[local]"
           }
         ]
       ]
@@ -45,7 +45,7 @@
         [
           "react-css-modules",
           {
-            "generateScopedName": "[folder]__[local]__[hash]"
+            "generateScopedName": "[hash:8]_[folder]_[name]_[local]"
           }
         ]
       ]
