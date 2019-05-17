@@ -8,9 +8,13 @@ gem "bootsnap", ">= 1.1.0", require: false
 gem "clearance"
 gem "pg", ">= 0.18", "< 2.0"
 gem "puma", "~> 3.11"
-gem "rails", "~> 6.0.0.beta3"
+gem "rails", "~> 6.0.0.rc1"
 gem "react-rails"
 gem "webpacker", "~> 4.0.2"
+
+group :production do
+  gem "pundit" # Workaround for Rails 6 and Administrate integration during production
+end
 
 group :development, :test do
   gem "dotenv-rails"

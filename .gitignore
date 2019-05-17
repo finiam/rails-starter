@@ -30,3 +30,4 @@ spec/examples.txt
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+storybook-static/
