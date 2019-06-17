@@ -10,8 +10,10 @@ module.exports = {
     {
       loader: "css-loader",
       options: {
-        modules: true,
-        localIdentName: "[hash:8]_[folder]_[name]_[local]"
+        modules: {
+          mode: "local",
+          localIdentName: "[hash:8]_[folder]_[name]_[local]"
+        }
       }
     },
     "postcss-loader"

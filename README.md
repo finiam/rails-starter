@@ -1,4 +1,4 @@
-# SVHealth Rails Starter
+# Aurora Rails Starter
 
 This repo contains our basic Rails and React boilerplate. Most of our projects revolved around this setup, with Postgres as a database, Rails as our backend framework with a React SPA at the front.
 
@@ -64,6 +64,6 @@ Also don't forget to setup the default admin user with `rake populate:admin_user
 
 # About
 
-This starter kit is maintained by [SVHealth](http://svhealth.io).
+This starter kit is maintained by [Aurora](http://auroradigital.co).
 
-If you need to contact the maintainer use or <a href="mailto:contact@svhealth.io">reach out to us</a> if you don't have access.
+If you need to contact the maintainer use or <a href="mailto:contact@auroradigital.co">reach out to us</a> if you don't have access.

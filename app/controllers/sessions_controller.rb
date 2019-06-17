@@ -4,7 +4,7 @@ class SessionsController < Clearance::SessionsController
   def create
     sign_in(authenticated_user) do |status|
       if status.success?
-        authenticated_user.update(last_login_ip: request.remote_ip, last_login_at: Time.now)
+        authenticated_user.update(last_login_ip: request.remote_ip, last_login_at: Time.now.utc)
 
         render json: { redirect_url: url_after_create }
       else
