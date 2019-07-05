@@ -1,3 +1,4 @@
+/* eslint-disable import/no-dynamic-require */
 const { environment } = require("@rails/webpacker");
 const { join } = require("path");
 const { sync } = require("glob");
@@ -16,7 +17,8 @@ const sharedConfig = {
 
   resolve: {
     alias: {
-      root: path.resolve("./frontend")
+      root: path.resolve("./frontend"),
+      "react-dom": "@hot-loader/react-dom"
     }
   },
 
@@ -27,6 +29,7 @@ const sharedConfig = {
 
 // delete existing loaders from @webpacker/rails config
 environment.loaders = { values: () => [] };
+
 environment.config.merge(sharedConfig);
 
 module.exports = environment;

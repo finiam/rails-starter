@@ -1,3 +1,4 @@
+import { hot } from "react-hot-loader/root";
 import React, { Component, lazy, Suspense } from "react";
 import PropTypes from "prop-types";
 import { logout } from "root/api/auth";
@@ -6,10 +7,10 @@ import "./index.css";
 
 const Text = lazy(() => import("root/components/Text"));
 
-export default class App extends Component {
+class App extends Component {
   static propTypes = {
     user: PropTypes.shape({
-      email: PropTypes.string.isRequired
+      name: PropTypes.string.isRequired
     }).isRequired
   };
 
@@ -19,7 +20,7 @@ export default class App extends Component {
 
   render() {
     const {
-      user: { email }
+      user: { name }
     } = this.props;
 
     return (
@@ -27,7 +28,7 @@ export default class App extends Component {
         <div styleName="root">
           <Text>Wow, an Async Component</Text>
 
-          <Text>Currently logged in as {email}</Text>
+          <Text>Hello {name}!</Text>
 
           <button type="button" onClick={this.handleLogoutClick}>
             Logout
@@ -37,3 +38,5 @@ export default class App extends Component {
     );
   }
 }
+
+export default hot(App);

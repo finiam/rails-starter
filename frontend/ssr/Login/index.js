@@ -1,9 +1,10 @@
+import { hot } from "react-hot-loader/root";
 import React, { Component } from "react";
 import { login } from "root/api/auth";
 
 import "./index.css";
 
-export default class Login extends Component {
+class Login extends Component {
   handleInputChange = event => {
     const {
       target: { name, value }
@@ -56,3 +57,5 @@ export default class Login extends Component {
     );
   }
 }
+
+export default hot(Login);

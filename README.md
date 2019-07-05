@@ -10,7 +10,7 @@ You can replace the app name `railsstarter` with your own name, and use it to se
 
 To run this project you will need the following tools and runtimes:
 
-- Ruby 2.6.1
+- Ruby 2.6.3
 - Node 10.\*
 - Postgres 10 and greater
 - Chromedriver
@@ -26,6 +26,8 @@ This default starter makes use of `react-rails` and `webpacker` to prerender two
 By server rendering, we can inject props into the components from the Rails app on the authentication flow, and at the same time keep developing the rest of the project as a SPA.
 
 The choice is yours in that regard. By default, we inject the current_user in the `App` component, from there the sky is the limit. You can keep developing the project with regular Rails views with the `render_react_component` helper, which prerenders components on the server side by default on all environments except `development`. You can also keep developing as a regular SPA and implement a REST API or a GraphQL Schema on the Rails backend.
+
+From rails you can render any component in the `frontend/ssr` directory. Every component here should be "hot" exported with `react-hot-loader` so that hot code reloading works during development. Components here are still just regular `react` components.
 
 The main premise of this starter is really simple. Get simple authentication with Clearance up and running, and use sensible Webpack and testing defaults.
 

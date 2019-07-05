@@ -7,6 +7,7 @@
     "es6": true
   },
   "rules": {
+    "eol-last": ["error", "always"],
     "react/prefer-stateless-function": 0,
     "react/jsx-wrap-multilines": 0,
     "react/jsx-filename-extension": 0,

@@ -1,7 +1,8 @@
-// By default, this pack is loaded for server-side rendering.
-// It must expose react_ujs as `ReactRailsUJS` and prepare a require context.
+import "babel-polyfill";
+import "react-hot-loader";
+
 const componentRequireContext = require.context(
-  "../../../frontend/components",
+  "../../../frontend/ssr",
   true
 );
 const ReactRailsUJS = require("react_ujs");
