@@ -9,7 +9,7 @@ gem "clearance"
 gem "pg", ">= 0.18", "< 2.0"
 gem "puma", "~> 3.11"
 gem "pundit" # Workaround for Rails 6 and Administrate integration during production
-gem "rails", "~> 6.0.0.rc1"
+gem "rails", "~> 6.0.0.rc2"
 gem "react-rails"
 gem "webpacker", "~> 4.0.2"
 
