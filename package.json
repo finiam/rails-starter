@@ -44,7 +44,7 @@
     "react_ujs": "^2.5.0",
     "regenerator-runtime": "^0.13.3",
     "style-loader": "^0.23.1",
-    "webpack": "^4.37.0"
+    "webpack": "^4.38.0"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^5.1.9",
