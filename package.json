@@ -21,7 +21,7 @@
     "@rails/activestorage": "^6.0.0-alpha",
     "@rails/ujs": "^6.0.0-alpha",
     "@rails/webpacker": "^4.0.7",
-    "@testing-library/react": "^8.0.6",
+    "@testing-library/react": "^8.0.7",
     "axios": "^0.19.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-react-css-modules": "^5.2.6",
