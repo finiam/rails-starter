@@ -7,7 +7,7 @@ gem "administrate"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "clearance"
 gem "pg", ">= 0.18", "< 2.0"
-gem "puma", "~> 3.11"
+gem "puma", "~> 4.0"
 gem "pundit" # Workaround for Rails 6 and Administrate integration during production
 gem "rails", "~> 6.0.0.rc2"
 gem "react-rails"
