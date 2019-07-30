@@ -21,7 +21,7 @@
     "@rails/activestorage": "^6.0.0-alpha",
     "@rails/ujs": "^6.0.0-alpha",
     "@rails/webpacker": "^4.0.7",
-    "@testing-library/react": "^8.0.6",
+    "@testing-library/react": "^8.0.7",
     "axios": "^0.19.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-react-css-modules": "^5.2.6",
@@ -40,11 +40,11 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-hot-loader": "^4.12.9",
+    "react-hot-loader": "^4.12.10",
     "react_ujs": "^2.5.0",
     "regenerator-runtime": "^0.13.3",
     "style-loader": "^0.23.1",
-    "webpack": "^4.37.0"
+    "webpack": "^4.38.0"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^5.1.9",
