@@ -56,6 +56,8 @@ Administrate is also installed, allowing users with the admin role to create acc
 - Feature/Integration tests interacting with the Webpacker bundle using Capybara and Chromedriver
 - Clearance backdoor to bypass authentication during feature tests
 
+Run the script `bin/local-ci` to run all tests, linters. It's a copy of what you should do on your CI system.
+
 # Developing
 
 Run `bin/setup` to get everything up and running. Then `bin/server` to start hammering away at it.
@@ -63,6 +65,7 @@ Run `bin/setup` to get everything up and running. Then `bin/server` to start ham
 Also don't forget to setup the default admin user with `rake populate:admin_user`. The default credentials are `admin@mail.com`, the password being `foobar`.
 
 `react-hot-loader` should reload everything you need as you edit stuff in the `frontend` folder. On the Rails side, everything is interpreted live, so no need to restart the server every time you change stuff.
+
 
 # About
 

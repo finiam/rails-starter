@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 /* eslint-disable import/no-dynamic-require */
 const { environment } = require("@rails/webpacker");
 const { join } = require("path");
@@ -27,7 +28,10 @@ const sharedConfig = {
   }
 };
 
-// delete existing loaders from @webpacker/rails config
+/**
+ * Delete all the loaders that come by default with Webpacker
+ * replacing them with our own
+ */
 environment.loaders = { values: () => [] };
 
 environment.config.merge(sharedConfig);

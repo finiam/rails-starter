@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+set -e
+source "./bin/functions"
+
+# Script that replicates the tests being run on CI
+
+pp_info "local_ci" "Running linters" && echo ""
+bundle exec rake lint:all
+
+pp_info "local_ci" "Running frontend tests" && echo ""
+yarn test
+
+pp_info "local_ci" "Running rails tests" && echo ""
+bundle exec rake spec

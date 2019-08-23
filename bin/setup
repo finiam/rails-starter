@@ -1,9 +1,20 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 set -e
+source "./bin/functions"
 
-echo "[setup]: Installing required languages"
-if [ -x "$(command -v asdf)" ]; then
+pp_info "setup" "Setting up .env file"
+cp .env.sample .env
+
+pp_info "setup" "Installing required languages"
+if not_installed "asdf"; then
+  pp_warn "setup" "
+    We are using asdf (https://github.com/asdf-vm/asdf) to manage tool
+    dependencies, since it was not found on your system we cannot ensure that you
+    are using the correct versions of all the tools. Please install it and run
+    this script again, or proceed at your own peril.
+  "
+else
   set +e
   asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git 2>/dev/null
   asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git 2>/dev/null
@@ -11,28 +22,24 @@ if [ -x "$(command -v asdf)" ]; then
 
   asdf install
 
-  echo "[setup]: Installing bundler"
+  pp_info "setup" "Installing bundler"
 
   gem install bundler
-else
-  echo "
-    We are using asdf (https://github.com/asdf-vm/asdf) to manage tool
-    dependencies, since it was not found on your system we cannot ensure that you
-    are using the correct versions of all the tools. Please install it and run
-    this script again, or proceed at your own peril.
-  "
 fi
 
-echo "[setup] Setting up .env file"
-cp .env.sample .env
+if not_installed "yarn"; then
+  pp_error "error" "yarn was not detected on this system, you need it to install frontend dependencies"
 
-echo "[setup]: Installing dependencies with bundler and yarn"
+  exit -1
+fi
+
+pp_info "setup" "Installing dependencies with bundler and yarn"
 bundle check || bundle install
 yarn
 
-echo "[setup]: Preparing database"
+pp_info "setup" "preparing databases"
 bundle exec rake db:create || true
 bundle exec rake db:migrate
 bundle exec rake db:test:prepare
 
-echo "You're good to go. Run bin/server to get the app running."
+pp_info "setup" "You're good to go. Run bin/server to get the app running."
