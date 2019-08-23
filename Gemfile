@@ -6,6 +6,8 @@ ruby ">= 2.6.1"
 gem "administrate", git: "https://github.com/thoughtbot/administrate.git"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "clearance"
+gem "omniauth"
+gem "omniauth-facebook"
 gem "pg", ">= 0.18", "< 2.0"
 gem "puma", "~> 3.11"
 gem "rails", "~> 6.0.0"

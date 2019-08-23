@@ -44,7 +44,8 @@
     "react_ujs": "^2.6.0",
     "regenerator-runtime": "^0.13.3",
     "style-loader": "^1.0.0",
-    "webpack": "^4.39.2"
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^5.1.11",
@@ -69,7 +70,6 @@
     "stylelint": "^10.1.0",
     "stylelint-config-prettier": "^5.2.0",
     "stylelint-order": "^3.0.1",
-    "webpack-cli": "^3.3.7",
     "webpack-dev-server": "^3.8.0"
   },
   "jest": {
