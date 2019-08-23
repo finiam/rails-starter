@@ -32,7 +32,7 @@ class Login extends Component {
       <div styleName="root">
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="email">
-            Email
+            Emails
             <input
               id="email"
               name="email"

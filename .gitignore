@@ -31,3 +31,4 @@ spec/examples.txt
 yarn-debug.log*
 .yarn-integrity
 storybook-static/
+.env

@@ -1,5 +1,8 @@
-process.env.NODE_ENV = process.env.NODE_ENV || 'development'
+process.env.NODE_ENV = process.env.NODE_ENV || "development";
 
-const environment = require('./environment')
+const DotenvPlugin = require("dotenv-webpack");
+const environment = require("./environment");
 
-module.exports = environment.toWebpackConfig()
+environment.plugins.prepend("Dotenv", new DotenvPlugin());
+
+module.exports = environment.toWebpackConfig();

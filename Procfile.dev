@@ -1,2 +1,2 @@
-web: bundle exec rails s -b 127.0.0.1
+web: bundle exec rails s -b 0.0.0.0
 webpack: ./bin/webpack-dev-server --hot
