@@ -6,6 +6,7 @@ namespace :populate do
         name: "Admin User",
         email: "admin@mail.com",
         password: "foobar",
+        password_confirmation: "foobar",
         role: "admin",
       )
 
