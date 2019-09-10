@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rspec/rspec-core.git
-  revision: 77dbc84657c5dc45e07a7fe0f5b02b4caeb6c9ad
+  revision: 0fcf18cda804b4a414923690b2ca452af863b13a
   branch: master
   specs:
     rspec-core (3.9.0.pre)
@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: https://github.com/rspec/rspec-expectations.git
-  revision: 75f5cc9cab09fd0728bcf95e26d2c4b46f73c466
+  revision: 5e0cf1915b7c42fa2c7495e07220698087a6eb97
   branch: master
   specs:
     rspec-expectations (3.9.0.pre)
@@ -26,7 +26,7 @@ GIT
 
 GIT
   remote: https://github.com/rspec/rspec-rails.git
-  revision: 1b2ea21a2e7d4d7eb9824e6764343e4b2100f3de
+  revision: aded68824cb35c644e1f421981b14891ba090f7c
   branch: master
   specs:
     rspec-rails (3.9.0.pre)
@@ -47,7 +47,7 @@ GIT
 
 GIT
   remote: https://github.com/thoughtbot/administrate.git
-  revision: fcf46ae4e6989ceb1b091791fec754a67da0f32c
+  revision: b53e6911375c62c6c17248331aefcc1df6102822
   specs:
     administrate (0.11.0)
       actionpack (>= 4.2)
@@ -120,8 +120,8 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
       zeitwerk (~> 2.1, >= 2.1.8)
-    addressable (2.6.0)
-      public_suffix (>= 2.0.2, < 4.0)
+    addressable (2.7.0)
+      public_suffix (>= 2.0.2, < 5.0)
     ast (2.4.0)
     autoprefixer-rails (9.6.1.1)
       execjs
@@ -135,11 +135,11 @@ GEM
       erubi (>= 1.0.0)
       rack (>= 0.9.0)
     bindex (0.8.1)
-    bootsnap (1.4.4)
+    bootsnap (1.4.5)
       msgpack (~> 1.0)
     builder (3.2.3)
     byebug (11.0.1)
-    capybara (3.28.0)
+    capybara (3.29.0)
       addressable
       mini_mime (>= 0.1.3)
       nokogiri (~> 1.8)
@@ -147,7 +147,7 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
-    childprocess (1.0.1)
+    childprocess (2.0.0)
       rake (< 13.0)
     clearance (1.17.0)
       actionmailer (>= 3.1)
@@ -177,8 +177,8 @@ GEM
     factory_bot_rails (5.0.2)
       factory_bot (~> 5.0.2)
       railties (>= 4.2.0)
-    faker (2.1.2)
-      i18n (>= 0.8)
+    faker (2.2.2)
+      i18n (~> 1.6.0)
     ffi (1.11.1)
     foreman (0.64.0)
       dotenv (~> 0.7.0)
@@ -223,11 +223,11 @@ GEM
     momentjs-rails (2.20.1)
       railties (>= 3.1)
     msgpack (1.3.1)
-    nio4r (2.4.0)
+    nio4r (2.5.1)
     nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
     parallel (1.17.0)
-    parser (2.6.3.0)
+    parser (2.6.4.0)
       ast (~> 2.4.0)
     pg (1.1.4)
     pry (0.12.2)
@@ -238,7 +238,7 @@ GEM
       pry (~> 0.10)
     pry-rails (0.3.9)
       pry (>= 0.10.4)
-    public_suffix (3.1.1)
+    public_suffix (4.0.1)
     puma (3.12.1)
     rack (2.0.7)
     rack-proxy (0.6.5)
@@ -295,13 +295,13 @@ GEM
       unicode-display_width (>= 1.4.0, < 1.7)
     rubocop-performance (1.4.1)
       rubocop (>= 0.71.0)
-    rubocop-rails (2.3.0)
+    rubocop-rails (2.3.2)
       rack (>= 1.1)
       rubocop (>= 0.72.0)
     ruby-progressbar (1.10.1)
     ruby_dep (1.5.0)
-    rubyzip (1.2.3)
-    sassc (2.1.0)
+    rubyzip (1.2.4)
+    sassc (2.2.0)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
       railties (>= 4.0.0)
@@ -310,8 +310,8 @@ GEM
       sprockets-rails
       tilt
     selectize-rails (0.12.6)
-    selenium-webdriver (3.142.3)
-      childprocess (>= 0.5, < 2.0)
+    selenium-webdriver (3.142.4)
+      childprocess (>= 0.5, < 3.0)
       rubyzip (~> 1.2, >= 1.2.2)
     shoulda-callback-matchers (1.1.4)
       activesupport (>= 3)
@@ -348,7 +348,7 @@ GEM
     websocket-extensions (0.1.4)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.1.9)
+    zeitwerk (2.1.10)
 
 PLATFORMS
   ruby
