@@ -45,23 +45,6 @@ GIT
   specs:
     rspec-support (3.9.0.pre)
 
-GIT
-  remote: https://github.com/thoughtbot/administrate.git
-  revision: b53e6911375c62c6c17248331aefcc1df6102822
-  specs:
-    administrate (0.11.0)
-      actionpack (>= 4.2)
-      actionview (>= 4.2)
-      activejob (>= 4.2)
-      activerecord (>= 4.2)
-      autoprefixer-rails (>= 6.0)
-      datetime_picker_rails (~> 0.0.7)
-      jquery-rails (>= 4.0)
-      kaminari (>= 1.0)
-      momentjs-rails (~> 2.8)
-      sassc-rails (~> 2.1)
-      selectize-rails (~> 0.6)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -122,6 +105,17 @@ GEM
       zeitwerk (~> 2.1, >= 2.1.8)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
+    administrate (0.12.0)
+      actionpack (>= 4.2)
+      actionview (>= 4.2)
+      activerecord (>= 4.2)
+      autoprefixer-rails (>= 6.0)
+      datetime_picker_rails (~> 0.0.7)
+      jquery-rails (>= 4.0)
+      kaminari (>= 1.0)
+      momentjs-rails (~> 2.8)
+      sassc-rails (~> 2.1)
+      selectize-rails (~> 0.6)
     ast (2.4.0)
     autoprefixer-rails (9.6.1.1)
       execjs
@@ -301,7 +295,7 @@ GEM
     ruby-progressbar (1.10.1)
     ruby_dep (1.5.0)
     rubyzip (1.2.4)
-    sassc (2.2.0)
+    sassc (2.2.1)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
       railties (>= 4.0.0)
@@ -354,7 +348,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  administrate!
+  administrate
   better_errors
   bootsnap (>= 1.1.0)
   capybara
