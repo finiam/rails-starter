@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby ">= 2.6.1"
 
-gem "administrate", git: "https://github.com/thoughtbot/administrate.git"
+gem "administrate"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "clearance"
 gem "pg", ">= 0.18", "< 2.0"
