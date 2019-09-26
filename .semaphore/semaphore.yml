@@ -49,4 +49,4 @@ blocks:
             - bundle exec rake spec
       env_vars:
         - name: DATABASE_URL
-        value: postgres://postgres@localhost/railsstarter-production
+          value: postgres://postgres@localhost/railsstarter-production
