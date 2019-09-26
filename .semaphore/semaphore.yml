@@ -22,9 +22,6 @@ global_job_config:
       - bundle install --deployment -j 4 --path vendor/bundle
       - yarn install
       - cache store
-  env_vars:
-    - name: DATABASE_URL
-      value: postgres://postgres@localhost/railsstarter-production
 
 blocks:
   - name: Linters
@@ -48,5 +45,8 @@ blocks:
         - name: Backend tests
           commands:
             - sem-service start postgres
+            - createdb -U postgres -h 0.0.0.0 railsstarter-production
             - bundle exec rake spec
-
+      env_vars:
+        - name: DATABASE_URL
+        value: postgres://postgres@localhost/railsstarter-production
