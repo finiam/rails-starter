@@ -28,6 +28,13 @@ global_job_config:
       - cache store
 
 blocks:
+  - name: Setup
+    task:
+      jobs:
+        - name: Run dependencies installers
+          commands:
+            - bundle install
+            - yarn install
   - name: Linters
     task:
       jobs:
