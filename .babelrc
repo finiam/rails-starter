@@ -4,7 +4,10 @@
       "@babel/preset-env",
       {
         "targets": {
-          "browsers": ["last 2 versions", "safari >= 7"]
+          "browsers": [
+            "last 2 versions",
+            "safari >= 7"
+          ]
         },
         "useBuiltIns": "usage",
         "corejs": 3
@@ -13,7 +16,12 @@
     "@babel/preset-react"
   ],
   "plugins": [
-    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
     "@babel/plugin-proposal-class-properties"
   ],
   "env": {
@@ -30,34 +38,8 @@
     "development": {
       "plugins": [
         "@babel/plugin-transform-react-jsx-source",
-        "react-hot-loader/babel",
-        [
-          "react-css-modules",
-          {
-            "generateScopedName": "[hash:8]_[folder]_[name]_[local]"
-          }
-        ]
+        "react-hot-loader/babel"
       ]
     },
-    "test": {
-      "plugins": [
-        [
-          "react-css-modules",
-          {
-            "generateScopedName": "[hash:8]_[folder]_[name]_[local]"
-          }
-        ]
-      ]
-    },
-    "jest": {
-      "plugins": [
-        [
-          "react-css-modules",
-          {
-            "generateScopedName": "[local]"
-          }
-        ]
-      ]
-    }
   }
 }

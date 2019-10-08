@@ -8,10 +8,90 @@
   },
   "rules": {
     "eol-last": ["error", "always"],
+    "curly": [
+      "error",
+      "multi-line"
+    ],
+    "padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "return"
+      },
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "if"
+      },
+      {
+        "blankLine": "always",
+        "prev": "if",
+        "next": "*"
+      },
+      {
+        "blankLine": "always",
+        "prev": [
+          "const",
+          "let",
+          "var"
+        ],
+        "next": "*"
+      },
+      {
+        "blankLine": "any",
+        "prev": [
+          "const",
+          "let",
+          "var"
+        ],
+        "next": [
+          "const",
+          "let",
+          "var"
+        ]
+      }
+    ],
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": [
+          "memo",
+          "element",
+          "key",
+          "req",
+          "acc",
+          "result"
+        ]
+      }
+    ],
+    "id-length": [
+      "error",
+      {
+        "exceptions": [
+          "_",
+          "x",
+          "y"
+        ]
+      }
+    ],
+    "no-use-before-define": [
+      "error",
+      "nofunc"
+    ],
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],
     "react/jsx-wrap-multilines": 0,
     "react/jsx-filename-extension": 0,
     "react/jsx-one-expression-per-line": 0,
     "react/static-property-placement": 0,
+    "react/jsx-props-no-spreading": "off",
+    "react/state-in-constructor": "off",
     "import/no-extraneous-dependencies": 0,
     "import/no-unresolved": [
       2,
@@ -19,8 +99,6 @@
         "ignore": ["root/"]
       }
     ],
-    "class-methods-use-this": 0,
-    "prefer-promise-reject-errors": 0,
     "jsx-a11y/anchor-is-valid": [
       "error",
       {

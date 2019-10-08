@@ -3,7 +3,7 @@ import React, { Component, lazy, Suspense } from "react";
 import PropTypes from "prop-types";
 import { logout } from "root/api/auth";
 
-import "./index.css";
+import styles from "./index.css";
 
 const Text = lazy(() => import("root/components/Text"));
 
@@ -25,7 +25,7 @@ class App extends Component {
 
     return (
       <Suspense fallback={<div />}>
-        <div styleName="root">
+        <div className={styles.root}>
           <Text>Wow, an Async Component</Text>
 
           <Text>Hello {name}!</Text>
