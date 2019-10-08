@@ -25,21 +25,11 @@
     "@babel/plugin-proposal-class-properties"
   ],
   "env": {
-    "production": {
-      "plugins": [
-        [
-          "react-css-modules",
-          {
-            "generateScopedName": "[hash:8]_[folder]_[name]_[local]"
-          }
-        ]
-      ]
-    },
     "development": {
       "plugins": [
         "@babel/plugin-transform-react-jsx-source",
         "react-hot-loader/babel"
       ]
-    },
+    }
   }
 }
