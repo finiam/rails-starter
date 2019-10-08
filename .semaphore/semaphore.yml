@@ -20,10 +20,9 @@ global_job_config:
     commands:
       - checkout
       - cache restore
-      - gem install bundler
-      - cd ~/.rbenv/plugins/ruby-build && git pull && cd -
       - sem-version ruby $(cat .tool-versions | grep ruby | cut -d ' ' -f 2)
       - sem-version node $(cat .tool-versions | grep nodejs | cut -d ' ' -f 2)
+      - gem install bundler
       - bundle install --deployment -j 4 --path vendor/bundle
       - yarn install
       - cache store
