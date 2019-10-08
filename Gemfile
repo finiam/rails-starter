@@ -28,7 +28,7 @@ end
 group :development do
   gem "better_errors"
   gem "foreman"
-  gem "listen", ">= 3.0.5", "< 3.2"
+  gem "listen", ">= 3.0.5", "< 3.3"
   gem "rubocop"
   gem "rubocop-performance"
   gem "rubocop-rails"
