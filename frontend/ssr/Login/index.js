@@ -2,7 +2,7 @@ import { hot } from "react-hot-loader/root";
 import React, { Component } from "react";
 import { login } from "root/api/auth";
 
-import "./index.css";
+import styles from "./index.css";
 
 class Login extends Component {
   handleInputChange = event => {
@@ -29,7 +29,7 @@ class Login extends Component {
 
   render() {
     return (
-      <div styleName="root">
+      <div className={styles.root}>
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="email">
             Emails
