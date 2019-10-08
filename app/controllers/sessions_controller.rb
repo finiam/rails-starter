@@ -1,12 +1,14 @@
 class SessionsController < Clearance::SessionsController
-  def new; end
+  before_action :require_login, only: [:destroy]
 
   def create
-    sign_in(authenticated_user) do |status|
+    user = authenticated_user
+
+    sign_in(user) do |status|
       if status.success?
         authenticated_user.update(last_login_ip: request.remote_ip, last_login_at: Time.now.utc)
 
-        render json: { redirect_url: url_after_create }
+        render json: { redirect_url: url_after_create, user: user }
       else
         render json: { error: status.failure_message }, status: :unauthorized
       end
@@ -16,14 +18,10 @@ class SessionsController < Clearance::SessionsController
   def destroy
     sign_out
 
-    render json: { redirect_url: url_after_destroy }
+    head :ok
   end
 
   private
-
-  def url_after_destroy
-    signed_out_root_url
-  end
 
   def authenticated_user
     User.authenticate(

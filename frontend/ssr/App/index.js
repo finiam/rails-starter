@@ -1,42 +1,36 @@
 import { hot } from "react-hot-loader/root";
-import React, { Component, lazy, Suspense } from "react";
+import React from "react";
 import PropTypes from "prop-types";
-import { logout } from "root/api/auth";
 
-import styles from "./index.css";
+import setupCsrf from "root/api/setupCsrf";
+import { AuthProvider, useAuth } from "root/hooks/useAuth";
+import Home from "root/components/Home";
+import Login from "root/components/Login";
 
-const Text = lazy(() => import("root/components/Text"));
+setupCsrf();
 
-class App extends Component {
-  static propTypes = {
-    user: PropTypes.shape({
-      name: PropTypes.string.isRequired
-    }).isRequired
-  };
+function InnerApp() {
+  const { user } = useAuth();
 
-  handleLogoutClick = () => {
-    logout();
-  };
+  if (user) return <Home />;
 
-  render() {
-    const {
-      user: { name }
-    } = this.props;
-
-    return (
-      <Suspense fallback={<div />}>
-        <div className={styles.root}>
-          <Text>Wow, an Async Component</Text>
-
-          <Text>Hello {name}!</Text>
-
-          <button type="button" onClick={this.handleLogoutClick}>
-            Logout
-          </button>
-        </div>
-      </Suspense>
-    );
-  }
+  return <Login />;
 }
+
+function App({ initialUser }) {
+  return (
+    <AuthProvider initialUser={initialUser}>
+      <InnerApp />
+    </AuthProvider>
+  );
+}
+
+App.propTypes = {
+  initialUser: PropTypes.shape({})
+};
+
+App.defaultProps = {
+  initialUser: null
+};
 
 export default hot(App);
