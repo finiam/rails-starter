@@ -43,7 +43,7 @@
     "react_ujs": "^2.6.0",
     "regenerator-runtime": "^0.13.3",
     "style-loader": "^1.0.0",
-    "webpack": "^4.41.1",
+    "webpack": "^4.41.2",
     "webpack-cli": "^3.3.8"
   },
   "devDependencies": {
