@@ -1,42 +1,32 @@
 import { hot } from "react-hot-loader/root";
-import React, { Component, lazy, Suspense } from "react";
+import React from "react";
 import PropTypes from "prop-types";
+import loadable from "@loadable/component";
+
 import { logout } from "root/api/auth";
 
 import styles from "./index.css";
 
-const Text = lazy(() => import("root/components/Text"));
+const Text = loadable(() => import("root/components/Text"));
 
-class App extends Component {
-  static propTypes = {
-    user: PropTypes.shape({
-      name: PropTypes.string.isRequired
-    }).isRequired
-  };
+function App({ user: { name } }) {
+  return (
+    <div className={styles.root}>
+      <Text>Wow, an Async Component</Text>
 
-  handleLogoutClick = () => {
-    logout();
-  };
+      <Text>Hello {name}!</Text>
 
-  render() {
-    const {
-      user: { name }
-    } = this.props;
-
-    return (
-      <Suspense fallback={<div />}>
-        <div className={styles.root}>
-          <Text>Wow, an Async Component</Text>
-
-          <Text>Hello {name}!</Text>
-
-          <button type="button" onClick={this.handleLogoutClick}>
-            Logout
-          </button>
-        </div>
-      </Suspense>
-    );
-  }
+      <button type="button" onClick={logout}>
+        Logout
+      </button>
+    </div>
+  );
 }
+
+App.propTypes = {
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired
+  }).isRequired
+};
 
 export default hot(App);
