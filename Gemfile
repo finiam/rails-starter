@@ -10,7 +10,7 @@ gem "pg", ">= 0.18", "< 2.0"
 gem "puma", "~> 4.3"
 gem "rails", "~> 6.0.1"
 gem "react-rails"
-gem "webpacker", "~> 4.1.0"
+gem "webpacker", "~> 4.2.0"
 
 group :development, :test do
   gem "dotenv-rails"
