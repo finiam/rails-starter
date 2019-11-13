@@ -3,8 +3,9 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
   test: /\.css$/,
   use: [
-    process.env.NODE_ENV === "development" ||
-    process.env.EXTRACT_CSS === "false"
+    // We only extract CSS during testing,
+    // for snapshoting purposes.
+    process.env.RAILS_ENV === "test"
       ? "style-loader"
       : MiniCssExtractPlugin.loader,
     {
