@@ -1,32 +1,38 @@
 import { hot } from "react-hot-loader/root";
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-import loadable from "@loadable/component";
 
-import { logout } from "root/api/auth";
+import setupCsrf from "root/api/setupCsrf";
+import { AuthProvider, useAuth } from "root/hooks/useAuth";
+import Home from "root/components/Home";
+import Login from "root/components/Login";
 
-import styles from "./index.css";
+function InnerApp() {
+  const { user } = useAuth();
 
-const Text = loadable(() => import("root/components/Text"));
+  if (user) return <Home />;
 
-function App({ user: { name } }) {
+  return <Login />;
+}
+
+function App({ initialUser }) {
+  useEffect(() => {
+    setupCsrf();
+  }, []);
+
   return (
-    <div className={styles.root}>
-      <Text>Wow, an Async Component</Text>
-
-      <Text>Hello {name}!</Text>
-
-      <button type="button" onClick={logout}>
-        Logout
-      </button>
-    </div>
+    <AuthProvider initialUser={initialUser}>
+      <InnerApp />
+    </AuthProvider>
   );
 }
 
 App.propTypes = {
-  user: PropTypes.shape({
-    name: PropTypes.string.isRequired
-  }).isRequired
+  initialUser: PropTypes.shape({})
+};
+
+App.defaultProps = {
+  initialUser: null
 };
 
 export default hot(App);
