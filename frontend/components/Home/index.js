@@ -1,28 +1,26 @@
-import { hot } from "react-hot-loader/root";
-import React, { lazy, Suspense } from "react";
+import React from "react";
+import loadable from "@loadable/component";
 
 import { useAuth } from "root/hooks/useAuth";
 
 import styles from "./index.css";
 
-const Text = lazy(() => import("root/components/Text"));
+const Text = loadable(() => import("root/components/Text"));
 
 function Home() {
   const { user, handleLogout } = useAuth();
 
   return (
-    <Suspense fallback={<div />}>
-      <div className={styles.root}>
-        <Text>Wow, an Async Component</Text>
+    <div className={styles.root}>
+      <Text>Wow, an Async Component</Text>
 
-        {user ? <Text>Hello {user.name}!</Text> : null}
+      {user ? <Text>Hello {user.name}!</Text> : null}
 
-        <button type="button" onClick={handleLogout}>
-          Logout
-        </button>
-      </div>
-    </Suspense>
+      <button type="button" onClick={handleLogout}>
+        Logout
+      </button>
+    </div>
   );
 }
 
-export default hot(Home);
+export default Home;
