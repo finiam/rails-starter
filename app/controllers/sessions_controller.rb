@@ -1,5 +1,9 @@
 class SessionsController < Clearance::SessionsController
-  before_action :require_login, only: [:destroy]
+  before_action :require_login, only: %i[show destroy]
+
+  def show
+    render json: { user: current_user }
+  end
 
   def create
     user = authenticated_user

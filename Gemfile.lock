@@ -119,10 +119,6 @@ GEM
     ast (2.4.0)
     autoprefixer-rails (9.6.4)
       execjs
-    babel-source (5.8.35)
-    babel-transpiler (0.7.0)
-      babel-source (>= 4.0, < 6)
-      execjs (~> 2.0)
     bcrypt (3.1.13)
     better_errors (2.5.1)
       coderay (>= 1.0.0)
@@ -151,7 +147,6 @@ GEM
       railties (>= 5.0)
     coderay (1.1.2)
     concurrent-ruby (1.1.5)
-    connection_pool (2.2.2)
     crass (1.0.5)
     database_cleaner (1.7.0)
     datetime_picker_rails (0.0.7)
@@ -269,12 +264,6 @@ GEM
     rb-inotify (0.10.0)
       ffi (~> 1.0)
     rb-readline (0.5.5)
-    react-rails (2.6.0)
-      babel-transpiler (>= 0.7.0)
-      connection_pool
-      execjs
-      railties (>= 3.2)
-      tilt
     regexp_parser (1.6.0)
     rspec-retry (0.6.2)
       rspec-core (> 3.3)
@@ -363,7 +352,6 @@ DEPENDENCIES
   puma (~> 4.3)
   rails (~> 6.0.1)
   rb-readline
-  react-rails
   rspec-core!
   rspec-expectations!
   rspec-mocks!

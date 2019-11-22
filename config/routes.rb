@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   end
 
   constraints Clearance::Constraints::SignedIn.new do
-    delete "/sign_out" => "sessions#destroy", as: "sign_out"
+    resource :session, only: %i[show destroy]
   end
 
   constraints Clearance::Constraints::SignedOut.new do

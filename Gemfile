@@ -9,7 +9,6 @@ gem "clearance"
 gem "pg", ">= 0.18", "< 2.0"
 gem "puma", "~> 4.3"
 gem "rails", "~> 6.0.1"
-gem "react-rails"
 gem "webpacker", "~> 4.2.0"
 
 group :development, :test do

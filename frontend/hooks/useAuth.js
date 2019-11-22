@@ -1,12 +1,24 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
-import { login, logout } from "root/api/auth";
+import { login, logout, getSession } from "root/api/auth";
 
 export const AuthContext = createContext();
 
-export const AuthProvider = ({ initialUser, children }) => {
-  const [user, setUser] = useState(initialUser);
+export const AuthProvider = ({ children }) => {
+  const [user, setUser] = useState(null);
+  const [fetchingInitialUser, setFetchingInitialUser] = useState(true);
+
+  useEffect(() => {
+    fetchInitialUser();
+  }, []);
+
+  async function fetchInitialUser() {
+    const response = await getSession();
+
+    setUser(response.data.user);
+    setFetchingInitialUser(false);
+  }
 
   async function handleLogin(email, password) {
     const response = await login(email, password);
@@ -20,20 +32,20 @@ export const AuthProvider = ({ initialUser, children }) => {
     setUser(null);
   }
 
+  // While fetching the initial user, do not render anything
+  // On a real app, show a loading spinner or equivalent
   return (
     <AuthContext.Provider value={{ user, handleLogin, handleLogout }}>
-      {children}
+      {fetchingInitialUser ? null : children}
     </AuthContext.Provider>
   );
 };
 
 AuthProvider.propTypes = {
-  initialUser: PropTypes.shape({}),
   children: PropTypes.node
 };
 
 AuthProvider.defaultProps = {
-  initialUser: null,
   children: null
 };
 

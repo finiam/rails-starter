@@ -15,6 +15,8 @@ Dir[Rails.root.join("spec", "support", "**", "*.rb")].each { |f| require f }
 
 ActiveRecord::Migration.maintain_test_schema!
 
+class JavaScriptError < StandardError; end
+
 RSpec.configure do |config|
   config.verbose_retry = true
   config.default_retry_count = 2
@@ -22,6 +24,16 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = false
   config.infer_spec_type_from_file_location!
   config.filter_rails_from_backtrace!
+
+  config.after(:each, type: :feature, js: true) do |_spec|
+    errors = page.driver.browser.manage.logs.get(:browser).
+      select { |e| e.level == "SEVERE" && e.message.present? }.
+      map(&:message).
+      to_a
+    if errors.present?
+      Rails.logger.error ActiveSupport::LogSubscriber.new.send(:color, errors.join("\n\n"), :red)
+    end
+  end
 end
 
 Capybara.javascript_driver = :selenium_chrome_headless
