@@ -21,7 +21,7 @@ AllCops:
 Metrics/LineLength:
   Enabled: false
 
-Layout/AlignParameters:
+Layout/ParameterAlignment:
   EnforcedStyle: with_fixed_indentation
 
 Layout/DotPosition:
@@ -34,7 +34,7 @@ Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
 
 Naming/PredicateName:
-  NamePrefixBlacklist:
+  ForbiddenPrefixes:
     - is_
     - have_
 
