@@ -2,19 +2,19 @@ require "rails_helper"
 
 RSpec.describe User, type: :model do
   describe "attribute validation" do
-    it { should validate_presence_of(:name) }
+    it { is_expected.to validate_presence_of(:name) }
 
-    it { should validate_presence_of(:email) }
+    it { is_expected.to validate_presence_of(:email) }
 
-    it { should validate_presence_of(:encrypted_password) }
+    it { is_expected.to validate_presence_of(:encrypted_password) }
 
-    it "should be invalid if password confirmation doesn't match" do
+    it "invalidates users with bad password confirmations" do
       user = build(:user, password_confirmation: "not_foobar")
 
       expect(user).to be_invalid
     end
 
-    it "should be valid if password confirmation matches" do
+    it "validates users with good password confirmations" do
       user = build(:user)
 
       expect(user).to be_valid

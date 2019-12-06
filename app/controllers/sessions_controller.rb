@@ -1,5 +1,9 @@
-class SessionsController < Clearance::SessionsController
-  before_action :require_login, only: [:destroy]
+class SessionsController < ApplicationController
+  before_action :require_login, only: %i[show destroy]
+
+  def show
+    render json: current_user
+  end
 
   def create
     user = authenticated_user
@@ -8,7 +12,7 @@ class SessionsController < Clearance::SessionsController
       if status.success?
         authenticated_user.update(last_login_ip: request.remote_ip, last_login_at: Time.now.utc)
 
-        render json: { redirect_url: url_after_create, user: user }
+        render json: user
       else
         render json: { error: status.failure_message }, status: :unauthorized
       end

@@ -1,6 +1,4 @@
-import { hot } from "react-hot-loader/root";
 import React, { useEffect } from "react";
-import PropTypes from "prop-types";
 
 import setupCsrf from "root/api/setupCsrf";
 import { AuthProvider, useAuth } from "root/hooks/useAuth";
@@ -15,24 +13,16 @@ function InnerApp() {
   return <Login />;
 }
 
-function App({ initialUser }) {
+function App() {
   useEffect(() => {
     setupCsrf();
   }, []);
 
   return (
-    <AuthProvider initialUser={initialUser}>
+    <AuthProvider>
       <InnerApp />
     </AuthProvider>
   );
 }
 
-App.propTypes = {
-  initialUser: PropTypes.shape({})
-};
-
-App.defaultProps = {
-  initialUser: null
-};
-
-export default hot(App);
+export default App;
