@@ -14,16 +14,24 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   async function fetchInitialUser() {
-    const response = await getSession();
+    try {
+      const response = await getSession();
 
-    setUser(response.data.user);
-    setFetchingInitialUser(false);
+      setUser(response.data);
+    } catch (error) {
+      // if 401, just ignore and reset the session
+      if (error.response.status === 401) setUser(null);
+
+      throw error;
+    } finally {
+      setFetchingInitialUser(false);
+    }
   }
 
   async function handleLogin(email, password) {
     const response = await login(email, password);
 
-    setUser(response.data.user);
+    setUser(response.data);
   }
 
   async function handleLogout() {

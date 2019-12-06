@@ -7,13 +7,7 @@ Rails.application.routes.draw do
     end
   end
 
-  constraints Clearance::Constraints::SignedIn.new do
-    resource :session, only: %i[show destroy]
-  end
-
-  constraints Clearance::Constraints::SignedOut.new do
-    resource :session, only: [:create]
-  end
+  resource :session, only: %i[show create destroy]
 
   root to: "home#index"
   get "*path" => "home#index"
