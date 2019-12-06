@@ -228,6 +228,8 @@ GEM
     puma (4.3.0)
       nio4r (~> 2.0)
     rack (2.0.7)
+    rack-cors (1.1.0)
+      rack (>= 2.0.0)
     rack-proxy (0.6.5)
       rack
     rack-test (1.1.0)
@@ -350,6 +352,7 @@ DEPENDENCIES
   pry-byebug
   pry-rails
   puma (~> 4.3)
+  rack-cors
   rails (~> 6.0.1)
   rb-readline
   rspec-core!
