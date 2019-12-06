@@ -19,9 +19,11 @@ function App() {
   }, []);
 
   return (
-    <AuthProvider>
-      <InnerApp />
-    </AuthProvider>
+    <React.StrictMode>
+      <AuthProvider>
+        <InnerApp />
+      </AuthProvider>
+    </React.StrictMode>
   );
 }
 
