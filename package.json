@@ -52,7 +52,7 @@
     "@storybook/addon-links": "^5.2.6",
     "@storybook/addons": "^5.2.6",
     "@storybook/cli": "^5.2.6",
-    "@storybook/react": "^5.2.6",
+    "@storybook/react": "^5.2.8",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "dotenv-webpack": "^1.7.0",
