@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rspec/rspec-core.git
-  revision: 82928aac51e1e7a06f155f73a72d6a5a88e7b2a8
+  revision: e82281aafc5b2263a6cfa718766117639158525e
   branch: master
   specs:
     rspec-core (3.10.0.pre)
@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: https://github.com/rspec/rspec-expectations.git
-  revision: 74871dfec85e656cddc80672f8b1eaf766651cf6
+  revision: 95d9693923ef605183eb102c6dcb40d4f9d8a144
   branch: master
   specs:
     rspec-expectations (3.10.0.pre)
@@ -17,7 +17,7 @@ GIT
 
 GIT
   remote: https://github.com/rspec/rspec-mocks.git
-  revision: 903c342e14080c40a8aa62a604d13cf23963ecfa
+  revision: fa3b6a06b63d785a594723befc34edf9eed8c0f5
   branch: master
   specs:
     rspec-mocks (3.10.0.pre)
@@ -26,13 +26,13 @@ GIT
 
 GIT
   remote: https://github.com/rspec/rspec-rails.git
-  revision: 5763583548b879bc3ad56a35ac2e1e3f7537cf77
+  revision: 4e91e662a05fc4a9f196a566107c2dabcd59c6f1
   branch: master
   specs:
-    rspec-rails (3.10.0.pre)
-      actionpack (>= 3.0)
-      activesupport (>= 3.0)
-      railties (>= 3.0)
+    rspec-rails (4.0.0.pre)
+      actionpack (>= 4.2)
+      activesupport (>= 4.2)
+      railties (>= 4.2)
       rspec-core (= 3.10.0.pre)
       rspec-expectations (= 3.10.0.pre)
       rspec-mocks (= 3.10.0.pre)
@@ -40,7 +40,7 @@ GIT
 
 GIT
   remote: https://github.com/rspec/rspec-support.git
-  revision: 3d227e50f7a3c1e88e3cb113a93537f7d524c1be
+  revision: c1d3ce25ea5504fc8478eeb4f340f7b91df7e98b
   branch: master
   specs:
     rspec-support (3.10.0.pre)
@@ -117,7 +117,7 @@ GEM
       sassc-rails (~> 2.1)
       selectize-rails (~> 0.6)
     ast (2.4.0)
-    autoprefixer-rails (9.6.4)
+    autoprefixer-rails (9.7.3)
       execjs
     babel-source (5.8.35)
     babel-transpiler (0.7.0)
@@ -173,7 +173,7 @@ GEM
       railties (>= 4.2.0)
     faker (2.8.0)
       i18n (>= 1.6, < 1.8)
-    ffi (1.11.1)
+    ffi (1.11.3)
     foreman (0.86.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -196,10 +196,10 @@ GEM
       activerecord
       kaminari-core (= 1.1.1)
     kaminari-core (1.1.1)
-    listen (3.2.0)
+    listen (3.2.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
-    loofah (2.3.1)
+    loofah (2.4.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -215,7 +215,7 @@ GEM
       railties (>= 3.1)
     msgpack (1.3.1)
     nio4r (2.5.2)
-    nokogiri (1.10.5)
+    nokogiri (1.10.7)
       mini_portile2 (~> 2.4.0)
     parallel (1.19.1)
     parser (2.6.5.0)
@@ -339,7 +339,7 @@ GEM
     websocket-extensions (0.1.4)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.2.1)
+    zeitwerk (2.2.2)
 
 PLATFORMS
   ruby
