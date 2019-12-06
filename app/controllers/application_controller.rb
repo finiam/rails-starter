@@ -6,12 +6,8 @@ class ApplicationController < ActionController::Base
   private
 
   def require_login
-    unless current_user
-      head :unauthorized
+    return if current_user
 
-      return
-    end
-
-    current_user
+    head :unauthorized
   end
 end
