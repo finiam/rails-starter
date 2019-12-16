@@ -99,6 +99,7 @@
         "ignore": ["root/"]
       }
     ],
+    "import/extensions": "off",
     "jsx-a11y/anchor-is-valid": [
       "error",
       {
