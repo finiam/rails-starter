@@ -18,7 +18,7 @@ AllCops:
     - "node_modules/**/*"
   TargetRubyVersion: 2.6.4
 
-Metrics/LineLength:
+Layout/LineLength:
   Enabled: false
 
 Layout/ParameterAlignment:

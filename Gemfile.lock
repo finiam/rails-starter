@@ -269,7 +269,7 @@ GEM
     regexp_parser (1.6.0)
     rspec-retry (0.6.2)
       rspec-core (> 3.3)
-    rubocop (0.77.0)
+    rubocop (0.78.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
       parser (>= 2.6)
@@ -377,4 +377,4 @@ RUBY VERSION
    ruby 2.6.5p114
 
 BUNDLED WITH
-   2.0.2
+   2.1.0
