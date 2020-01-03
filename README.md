@@ -21,13 +21,7 @@ Our `bin/setup` script will handle installing Ruby and Node if you have [asdf-vm
 
 ## Architecture
 
-This default starter makes use of `react-rails` and `webpacker` to prerender two distinct components: `Login` and `App`, with the respective views being `sessions#new` and `home#index`.
-
-By server rendering, we can inject props into the components from the Rails app on the authentication flow, and at the same time keep developing the rest of the project as a SPA.
-
-The choice is yours in that regard. By default, we inject the current_user in the `App` component, from there the sky is the limit. You can keep developing the project with regular Rails views with the `render_react_component` helper, which prerenders components on the server side by default on all environments except `development`. You can also keep developing as a regular SPA and implement a REST API or a GraphQL Schema on the Rails backend.
-
-From rails you can render any component in the `frontend/ssr` directory. Every component here should be "hot" exported with `react-hot-loader` so that hot code reloading works during development. Components here are still just regular `react` components.
+This default starter configure Webpacker with a single entry point for the frontend app, that being `frontend/index.js`. From there you can do anything. Here we bundle a React application, but you can replace that with any kind of frontend library. There is no server-side rendering.
 
 The main premise of this starter is really simple. Get simple authentication with Clearance up and running, and use sensible Webpack and testing defaults.
 
@@ -46,7 +40,7 @@ We use React as our UI framework, but that can be replaced if need be. With our 
 - Even with the pre-rendered components coming from Rails, you can still use `react-router` as usual, building upon the `App` entry point.
 
 ## Backend
-The only backend logic present is the user authentication. We created a custom session controller to handle logins and logouts using the Rails Session API.
+The only backend logic present is the user authentication. We created a custom session controller to handle logins and logouts using the Rails sessions (HTTP session and cookies).
 
 Administrate is also installed, allowing users with the admin role to create accounts, as user registrations are disabled by default. The admin dashboard is present at `/admin`.
 
