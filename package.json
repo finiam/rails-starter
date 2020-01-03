@@ -69,7 +69,7 @@
     "react-test-renderer": "^16.12.0",
     "stylelint": "^12.0.1",
     "stylelint-config-prettier": "^8.0.0",
-    "stylelint-order": "^3.1.0",
+    "stylelint-order": "^4.0.0",
     "webpack-dev-server": "^3.10.1"
   },
   "jest": {
