@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   private
 
-  def require_login
-    head :not_found unless current_user
+  def not_authenticated
+    head :not_found
   end
 end
