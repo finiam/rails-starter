@@ -6,8 +6,6 @@ RSpec.describe User, type: :model do
 
     it { is_expected.to validate_presence_of(:email) }
 
-    it { is_expected.to validate_presence_of(:encrypted_password) }
-
     it "invalidates users with bad password confirmations" do
       user = build(:user, password_confirmation: "not_foobar")
 

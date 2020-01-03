@@ -7,9 +7,7 @@ export async function getSession() {
 }
 
 export async function login(email, password) {
-  const response = await axios.post("/session", {
-    session: { identifier: email, password }
-  });
+  const response = await axios.post("/session", { email, password });
 
   return response;
 }

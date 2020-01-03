@@ -5,11 +5,11 @@ ruby ">= 2.6.4"
 
 gem "administrate"
 gem "bootsnap", ">= 1.1.0", require: false
-gem "clearance"
 gem "pg", ">= 0.18", "< 2.0"
 gem "puma", "~> 4.3"
 gem "rack-cors"
 gem "rails", "~> 6.0.2"
+gem "sorcery"
 gem "webpacker", "~> 4.2.2"
 
 group :development, :test do
@@ -41,6 +41,7 @@ group :test do
   gem "capybara"
   gem "database_cleaner"
   gem "differ"
+  gem "rack_session_access"
   gem "selenium-webdriver"
   gem "shoulda-callback-matchers"
   gem "shoulda-matchers"

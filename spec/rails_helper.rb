@@ -7,9 +7,9 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require "spec_helper"
 require "rspec/rails"
 require "capybara/rails"
-require "clearance/rspec"
 require "selenium/webdriver"
 require "database_cleaner"
+require "rack_session_access/capybara"
 
 Dir[Rails.root.join("spec/support/**/*.rb")].sort.each { |f| require f }
 
@@ -18,6 +18,10 @@ ActiveRecord::Migration.maintain_test_schema!
 class JavaScriptError < StandardError; end
 
 RSpec.configure do |config|
+  config.include Sorcery::TestHelpers::Rails::Controller, type: :controller
+  config.include ControllerMacros, type: :controller
+  config.include AuthForFeatures, type: :feature
+
   config.verbose_retry = true
   config.default_retry_count = 2
   config.exceptions_to_retry = [Net::ReadTimeout]
