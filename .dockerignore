@@ -8,3 +8,4 @@ __mocks__/*
 docker-compose.yml
 public/packs/*
 public/assets/*
+
