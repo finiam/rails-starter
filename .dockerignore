@@ -1,0 +1,10 @@
+.semaphore/*
+.storybook/*
+node_modules/*
+tmp/*
+spec/*
+.git/*
+__mocks__/*
+docker-compose.yml
+public/packs/*
+public/assets/*
