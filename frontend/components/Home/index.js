@@ -1,11 +1,12 @@
 import React from "react";
-import loadable from "@loadable/component";
+import asyncImport from 'react-imported-component';
+import { Link } from "wouter";
 
 import { useAuth } from "root/hooks/useAuth";
 
 import styles from "./index.css";
 
-const Text = loadable(() => import("root/components/Text"));
+const Text = asyncImport(() => import("root/components/Text"));
 
 function Home() {
   const { user, handleLogout } = useAuth();
@@ -14,11 +15,19 @@ function Home() {
     <div className={styles.root}>
       <Text>Wow, an Async Component</Text>
 
-      {user ? <Text>Hello {user.name}!</Text> : null}
+      {user && <Text>Hello {user.name}!</Text>}
 
-      <button type="button" onClick={handleLogout}>
-        Logout
-      </button>
+      <div className={styles.links}>
+        {user && user.role === "admin" && <a href="/admin">Admin Area</a>}
+
+        {user ? (
+          <button type="button" onClick={handleLogout}>
+            Logout
+          </button>
+        ) : (
+          <Link to="/login">Login</Link>
+        )}
+      </div>
     </div>
   );
 }
