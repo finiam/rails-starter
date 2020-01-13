@@ -2,35 +2,38 @@ class SessionsController < ApplicationController
   before_action :require_login, only: %i[show destroy]
 
   def show
-    render json: current_user
+    render json: user_to_json
   end
 
   def create
-    user = authenticated_user
+    user = login(
+      params[:email],
+      params[:password],
+      true,
+    )
 
-    sign_in(user) do |status|
-      if status.success?
-        authenticated_user.update(last_login_ip: request.remote_ip, last_login_at: Time.now.utc)
-
-        render json: user
-      else
-        render json: { error: status.failure_message }, status: :unauthorized
-      end
+    if user
+      render json: user_to_json
+    else
+      head :not_found
     end
   end
 
   def destroy
-    sign_out
+    invalidate_active_sessions! if params[:everywhere] == "true"
+    logout
 
     head :ok
   end
 
   private
 
-  def authenticated_user
-    User.authenticate(
-      params[:session][:identifier],
-      params[:session][:password],
-    )
+  def user_to_json
+    {
+      id: current_user.id,
+      email: current_user.email,
+      name: current_user.name,
+      role: current_user.role
+    }
   end
 end

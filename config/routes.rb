@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
-  constraints Clearance::Constraints::SignedIn.new(&:admin?) do
-    namespace :admin do
-      resources :users
+  namespace :admin do
+    resources :users
 
-      root to: "users#index"
-    end
+    root to: "users#index"
   end
 
   resource :session, only: %i[show create destroy]

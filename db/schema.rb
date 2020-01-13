@@ -10,24 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_16_002922) do
+ActiveRecord::Schema.define(version: 2020_01_02_105239) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "users", id: :serial, force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "name", null: false
+  create_table "users", force: :cascade do |t|
     t.string "email", null: false
-    t.string "encrypted_password", limit: 128, null: false
-    t.string "confirmation_token", limit: 128
-    t.string "remember_token", limit: 128, null: false
+    t.string "name", null: false
     t.string "role", default: "user", null: false
-    t.inet "last_login_ip"
+    t.string "crypted_password"
+    t.string "salt"
     t.datetime "last_login_at"
-    t.index ["email"], name: "index_users_on_email"
-    t.index ["remember_token"], name: "index_users_on_remember_token"
+    t.datetime "last_logout_at"
+    t.datetime "last_activity_at"
+    t.datetime "invalidate_sessions_before"
+    t.string "last_login_from_ip_address"
+    t.integer "failed_logins_count", default: 0
+    t.datetime "lock_expires_at"
+    t.string "unlock_token"
+    t.string "string"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["invalidate_sessions_before"], name: "index_users_on_invalidate_sessions_before"
+    t.index ["last_logout_at", "last_activity_at"], name: "index_users_on_last_logout_at_and_last_activity_at"
+    t.index ["unlock_token"], name: "index_users_on_unlock_token"
   end
 
 end

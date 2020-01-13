@@ -1,13 +1,9 @@
 class ApplicationController < ActionController::Base
-  include Clearance::Controller
-
   protect_from_forgery with: :exception
 
   private
 
-  def require_login
-    return if current_user
-
-    head :unauthorized
+  def not_authenticated
+    head :not_found
   end
 end

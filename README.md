@@ -2,7 +2,7 @@
 
 This repo contains our basic Rails and React boilerplate. Most of our projects revolved around this setup, with Postgres as a database, Rails as our backend framework with a React SPA at the front.
 
-It includes some sane defaults, including a heavily customized Webpack config, user authentication using Clearance, testing using Rspec and an Administrate engine to manage Users.
+It includes some sane defaults, including a heavily customized Webpack config, user authentication using Sorcery, testing using Rspec and an Administrate engine to manage Users.
 
 You can replace the app name `railsstarter` with your own name, and use it to setup a new project.
 
@@ -23,7 +23,7 @@ Our `bin/setup` script will handle installing Ruby and Node if you have [asdf-vm
 
 This default starter configure Webpacker with a single entry point for the frontend app, that being `frontend/index.js`. From there you can do anything. Here we bundle a React application, but you can replace that with any kind of frontend library. There is no server-side rendering.
 
-The main premise of this starter is really simple. Get simple authentication with Clearance up and running, and use sensible Webpack and testing defaults.
+The main premise of this starter is really simple. Get simple authentication with Sorcery up and running, and use sensible Webpack and testing defaults.
 
 ## Frontend
 
@@ -40,15 +40,23 @@ We use React as our UI framework, but that can be replaced if need be. With our 
 - Even with the pre-rendered components coming from Rails, you can still use `react-router` as usual, building upon the `App` entry point.
 
 ## Backend
-The only backend logic present is the user authentication. We created a custom session controller to handle logins and logouts using the Rails sessions (HTTP session and cookies).
+The only backend logic present is the user authentication. We created a custom session controller to handle logins and logouts using the Sorcery gem. By default the Sorcery gem only:
+- protects against brute force attacks
+- tracks logins and logouts (time and location)
+- session timeouts
+
+We use Rails Session to persist user information, which in turn uses HTTP cookies. The session is valid for exactly one week and it's refreshed everytime a user completes an action (basically on every page visit). When logging out, we can pass a `everywhere` param set to `true` to invalid all of the user sessions.
+
+If you want more Sorcery modules, check out their documentation and implement it. Open up a PR if you think a given task should be already implemented by default. We do not have user confirmation emails, neither forget password logic. Sorcery can handle that but you have to implement it by hand.
 
 Administrate is also installed, allowing users with the admin role to create accounts, as user registrations are disabled by default. The admin dashboard is present at `/admin`.
+
 
 ## Testing
 
 - Uses Rspec as a testing framework, using FactoryBot and Faker to generate records for testing
 - Feature/Integration tests interacting with the Webpacker bundle using Capybara and Chromedriver
-- Clearance backdoor to bypass authentication during feature tests
+- Sorcery backdoor to bypass authentication during feature tests
 
 Run the script `bin/local-ci` to run all tests, linters. It's a copy of what you should do on your CI system.
 

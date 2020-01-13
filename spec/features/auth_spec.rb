@@ -3,8 +3,8 @@ require "rails_helper"
 RSpec.describe "Authentication flow", js: true do
   it "logins with correct credentials" do
     user = create(:user)
-    visit "/"
 
+    visit "/"
     fill_in("email", with: user.email)
     fill_in("password", with: "foobar")
     click_on("Sign In")
@@ -14,8 +14,8 @@ RSpec.describe "Authentication flow", js: true do
 
   it "does not login with bad credentials" do
     user = create(:user)
-    visit "/"
 
+    visit "/"
     fill_in("email", with: user.email)
     fill_in("password", with: "badpassword")
     click_on("Sign In")
@@ -23,16 +23,20 @@ RSpec.describe "Authentication flow", js: true do
     expect(page).to_not have_content("Wow, an Async Component")
   end
 
-  it "uses the user identifier to login" do
+  it "correctly renders the homepage if authenticated" do
     user = create(:user)
-    visit "/?as=#{user.id}"
+
+    login_user(user)
+    visit "/"
 
     expect(page).to have_content("Wow, an Async Component")
   end
 
   it "renders the user's name" do
     user = create(:user)
-    visit "/?as=#{user.id}"
+
+    login_user(user)
+    visit "/"
 
     expect(page).to have_content(user.name)
   end

@@ -1,21 +1,14 @@
 class User < ApplicationRecord
-  include Clearance::User
+  authenticates_with_sorcery!
+
   validates :email, presence: true, uniqueness: true
-  validates :encrypted_password, :name, presence: true
+  validates :name, presence: true
   validate :validate_password_confirmation
 
   enum role: {
     user: "user",
     admin: "admin"
   }
-
-  def self.authenticate(email, password)
-    user = find_by(email: email)
-
-    return nil if user.nil? || !user.authenticated?(password)
-
-    user
-  end
 
   attr_accessor :password_confirmation
 
