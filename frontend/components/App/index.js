@@ -1,16 +1,23 @@
 import React, { useEffect } from "react";
+import { Route } from "wouter";
+import asyncImport from "react-imported-component";
 
 import setupCsrf from "root/api/setupCsrf";
 import { AuthProvider, useAuth } from "root/hooks/useAuth";
-import Home from "root/components/Home";
-import Login from "root/components/Login";
+
+// Route code splitting, as an example
+const Home = asyncImport(() => import("root/components/Home"));
+const Login = asyncImport(() => import("root/components/Login"));
 
 function InnerApp() {
   const { user } = useAuth();
 
-  if (user) return <Home />;
-
-  return <Login />;
+  return (
+    <>
+      <Route path="/" component={Home} />
+      {!user && <Route path="/login" component={Login} />}
+    </>
+  );
 }
 
 function App() {

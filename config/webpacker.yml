@@ -16,8 +16,8 @@ default: &default
   # Reload manifest.json on all requests so we reload latest compiled packs
   cache_manifest: false
 
-  # Extract and emit a css file
-  extract_css: true
+  # Do not extract css by default, only on production
+  extract_css: false
 
   static_assets_extensions:
     - .jpg
@@ -76,9 +76,6 @@ test:
 
   # Compile test packs to a separate directory
   public_output_path: packs-test
-
-  # As specified on loaders/css.js do not extract CSS on testing
-  extract_css: false
 
 production:
   <<: *default

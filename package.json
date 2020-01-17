@@ -6,8 +6,8 @@
     "lint": "eslint --ext js,jsx frontend app/assets",
     "lint-styles": "stylelint frontend/**/* app/assets/**/*",
     "test": "BABEL_ENV=test NODE_ENV=test jest frontend",
-    "storybook": "EXTRACT_CSS=false start-storybook -p 6006",
-    "build-storybook": "EXTRACT_CSS=false build-storybook"
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@babel/core": "^7.8.3",
@@ -17,7 +17,6 @@
     "@babel/preset-env": "^7.8.3",
     "@babel/preset-react": "^7.8.3",
     "@hot-loader/react-dom": "^16.11.0",
-    "@loadable/component": "^5.12.0",
     "@rails/actioncable": "^6.0.2",
     "@rails/activestorage": "^6.0.2",
     "@rails/webpacker": "^4.2.2",
@@ -40,10 +39,12 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-hot-loader": "^4.12.18",
+    "react-imported-component": "^6.2.1",
     "regenerator-runtime": "^0.13.3",
     "style-loader": "^1.1.2",
     "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.10",
+    "wouter": "^2.4.0"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^5.3.6",

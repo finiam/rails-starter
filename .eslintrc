@@ -1,13 +1,23 @@
 {
-  "plugins": ["jsx-a11y", "react-hooks"],
+  "plugins": [
+    "jsx-a11y",
+    "react-hooks"
+  ],
   "parser": "babel-eslint",
-  "extends": ["airbnb", "prettier", "plugin:jsx-a11y/recommended"],
+  "extends": [
+    "airbnb",
+    "prettier",
+    "plugin:jsx-a11y/recommended"
+  ],
   "env": {
     "browser": true,
     "es6": true
   },
   "rules": {
-    "eol-last": ["error", "always"],
+    "eol-last": [
+      "error",
+      "always"
+    ],
     "curly": [
       "error",
       "multi-line"
@@ -83,7 +93,8 @@
     "no-unused-vars": [
       "error",
       {
-        "argsIgnorePattern": "^_"
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_"
       }
     ],
     "react/jsx-wrap-multilines": 0,
@@ -96,15 +107,21 @@
     "import/no-unresolved": [
       2,
       {
-        "ignore": ["root/"]
+        "ignore": [
+          "root/"
+        ]
       }
     ],
     "import/extensions": "off",
     "jsx-a11y/anchor-is-valid": [
       "error",
       {
-        "components": ["Link"],
-        "specialLink": ["to"]
+        "components": [
+          "Link"
+        ],
+        "specialLink": [
+          "to"
+        ]
       }
     ],
     "jsx-a11y/href-no-hash": "off",
@@ -112,7 +129,10 @@
       2,
       {
         "required": {
-          "some": ["nesting", "id"]
+          "some": [
+            "nesting",
+            "id"
+          ]
         }
       }
     ],

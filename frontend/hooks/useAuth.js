@@ -19,8 +19,12 @@ export const AuthProvider = ({ children }) => {
 
       setUser(response.data);
     } catch (error) {
-      // if 401, just ignore and reset the session
-      if (error.response.status === 401) setUser(null);
+      // if 404, just ignore and reset the session
+      if (error.response.status === 404) {
+        setUser(null);
+
+        return;
+      }
 
       throw error;
     } finally {

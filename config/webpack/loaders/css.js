@@ -8,11 +8,11 @@ const MiniCssExtractPlugin = require("@rails/webpacker/node_modules/mini-css-ext
 module.exports = {
   test: /\.css$/,
   use: [
-    // We only extract CSS during testing,
+    // We only extract CSS during production,
     // for snapshoting purposes.
-    process.env.RAILS_ENV === "test"
-      ? "style-loader"
-      : MiniCssExtractPlugin.loader,
+    process.env.RAILS_ENV === "production"
+      ? MiniCssExtractPlugin.loader
+      : "style-loader",
     {
       loader: "css-loader",
       options: {
