@@ -141,7 +141,7 @@ GEM
     coderay (1.1.2)
     concurrent-ruby (1.1.5)
     crass (1.0.6)
-    database_cleaner (1.8.1)
+    database_cleaner (1.8.2)
     datetime_picker_rails (0.0.7)
       momentjs-rails (>= 2.8.1)
     diff-lcs (1.3)
