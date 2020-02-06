@@ -8,7 +8,6 @@
     "airbnb",
     "prettier",
     "plugin:jsx-a11y/recommended",
-    "plugin:compat/recommended"
   ],
   "env": {
     "browser": true,
