@@ -1,3 +1,5 @@
+const path = require("path")
+
 module.exports = {
   test: /\.js|.jsx(\.erb)?$/,
   exclude:
@@ -6,6 +8,6 @@ module.exports = {
         [/node_modules/]
       : // exclude stories and tests from other environments
         [/node_modules/, /.+\.stories\.js$/, /.+\.test\.js/],
-  include: ["node_modules/wouter"],
+  include: [path.join(__dirname, "../../../frontend") ,/node_modules\/wouter/],
   loader: "babel-loader"
 };
