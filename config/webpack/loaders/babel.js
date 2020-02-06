@@ -6,5 +6,6 @@ module.exports = {
         [/node_modules/]
       : // exclude stories and tests from other environments
         [/node_modules/, /.+\.stories\.js$/, /.+\.test\.js/],
+  include: ["node_modules/wouter"],
   loader: "babel-loader"
 };
