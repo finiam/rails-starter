@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Route } from "wouter";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import asyncImport from "react-imported-component";
 
 import setupCsrf from "root/api/setupCsrf";
@@ -13,10 +13,12 @@ function InnerApp() {
   const { user } = useAuth();
 
   return (
-    <>
-      <Route path="/" component={Home} />
-      {!user && <Route path="/login" component={Login} />}
-    </>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        {!user && <Route path="/login" component={Login} />}
+      </Switch>
+    </Router>
   );
 }
 

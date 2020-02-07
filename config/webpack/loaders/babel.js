@@ -1,10 +1,12 @@
+// In case we use some dependency that needs transpiling
+// to work in older browsers for example, add it here!
+const dependenciesToTranspile = [];
+const nodeModules = new RegExp(
+  `node_modules/(?!(${dependenciesToTranspile.join("|")})/).*`
+);
+
 module.exports = {
   test: /\.js|.jsx(\.erb)?$/,
-  exclude:
-    process.env.NODE_ENV === "development"
-      ? // watch everything except node_modules
-        [/node_modules/]
-      : // exclude stories and tests from other environments
-        [/node_modules/, /.+\.stories\.js$/, /.+\.test\.js/],
+  exclude: [nodeModules, /.+\.stories\.js$/, /.+\.test\.js/],
   loader: "babel-loader"
 };

@@ -1,4 +1,4 @@
-import "babel-polyfill";
-import "react-hot-loader";
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 
 require("../../../frontend/index");

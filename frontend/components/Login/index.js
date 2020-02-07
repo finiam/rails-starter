@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useLocation } from "wouter";
+import { useHistory } from "react-router-dom";
 
 import useForm from "root/hooks/useForm";
 import { useAuth } from "root/hooks/useAuth";
@@ -9,7 +9,7 @@ import styles from "./index.css";
 export default function Login() {
   const { formValues, handleChange } = useForm();
   const { handleLogin } = useAuth();
-  const [_location, setLocation] = useLocation();
+  const history = useHistory();
   const [error, setError] = useState(false);
 
   async function handleSubmit(event) {
@@ -20,7 +20,7 @@ export default function Login() {
     try {
       await handleLogin(email, password);
 
-      setLocation("/");
+      history.push("/");
     } catch {
       setError(true);
     }
