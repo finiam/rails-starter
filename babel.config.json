@@ -3,13 +3,7 @@
     [
       "@babel/preset-env",
       {
-        "targets": {
-          "browsers": [
-            "last 2 versions",
-            "safari >= 7"
-          ]
-        },
-        "useBuiltIns": "usage",
+        "useBuiltIns": "entry",
         "corejs": 3
       }
     ],
