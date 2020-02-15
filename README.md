@@ -38,6 +38,10 @@ We use React as our UI framework, but that can be replaced if need be. With our 
 - Code splitting is achieved with the Babel config mentioned above and `react-imported.component`. Check the example frontend app for usage.
 - We also setup `storybook` to mantain the ocasional styleguide. It's configured for React, but again, can be used with other frontend library or framework.
 
+### Browser support
+
+This starter is tested in Chrome, Firefox, Safari and IE11, but we can safely assume that it works in all browsers covered by our `browserslist` specification. We include both `core-js` and `regenerator-runtime` on our frontend bundle. Babel then converts that on individual polyfills, so we only include polyfills we actually need.
+
 ## Backend
 The only backend logic present is the user authentication. We created a custom session controller to handle logins and logouts using the Sorcery gem. By default the Sorcery gem only:
 - protects against brute force attacks
