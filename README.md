@@ -2,9 +2,9 @@
 
 This repo contains our basic Rails and React boilerplate. Most of our projects revolved around this setup, with Postgres as a database, Rails as our backend framework with a React SPA at the front.
 
-It includes some sane defaults, including a heavily customized Webpack config, user authentication using Sorcery, testing using Rspec and an Administrate engine to manage Users.
+It includes some sane defaults, including a heavily customized Webpack config, user authentication using Sorcery, testing using Rspec and an Administrate engine to manage Users and other backend models.
 
-You can replace the app name `railsstarter` with your own name, and use it to setup a new project.
+You can replace the app name `railsstarter` with your own name, and use it to setup a new project. Use `sed` or another tool to replace instances of `railsstarter` and `RailsStarter`.
 
 ## Requisites
 
@@ -23,7 +23,7 @@ Our `bin/setup` script will handle installing Ruby and Node if you have [asdf-vm
 
 This default starter configure Webpacker with a single entry point for the frontend app, that being `frontend/index.js`. From there you can do anything. Here we bundle a React application, but you can replace that with any kind of frontend library. There is no server-side rendering.
 
-The main premise of this starter is really simple. Get simple authentication with Sorcery up and running, and use sensible Webpack and testing defaults.
+The main premise of this starter is really simple. Get simple authentication with Sorcery up and running, and use sensible Webpack and feature testing defaults.
 
 ## Frontend
 
@@ -33,11 +33,10 @@ We use React as our UI framework, but that can be replaced if need be. With our 
 
 - CSS modules. Also includes CSS separation during the production phase, splitting all CSS to a separate bundle
 - All CSS is processed using PostCSS, our plugins allow you to write "SASS like" stylesheets. We also have some experimental features via `postcss-preset-env`. Check the `postcss.config.js` for the plugins in use.
-- Some special rules we use are enabled on the Babel config. **Class properties** to simplify React class components, **dynamic import** syntax to allow code splitting via lazy-loading and **legacy decorators** for React high order components. Also, the base `preset-react` and `preset-env` are also enabled. Check `.browserlistrc` to check which browsers are being targeted.
-- `babel-loader` and `file-loader` are configured in the `config/webpack/loaders` folder. You can add more loaders here if needed and they will get loaded by Webpacker.
-- Code splitting is achieved with the Babel config mentioned above and `React.lazy`. Check the example frontend app for usage.
-- Separate entry points for the logged in app and logged out via the `application` and `signed_out` packs.
-- Even with the pre-rendered components coming from Rails, you can still use `react-router` as usual, building upon the `App` entry point.
+- Some special rules we use are enabled on the Babel config. **Class properties**, **react-imported-component** which allows us to us the package with the same name to async load React components, and **legacy decorators** for the ocasional high order component. Also, the base `preset-react` and `preset-env` are also enabled. Check `.browserlistrc` to check which browsers are being targeted.
+- `babel-loader` and `file-loader` are configured in the `config/webpack/loaders` folder. You can add more loaders here if needed and they will get loaded by `webpacker`. We deleted all the loaders that come with `webpacker` by default, using our own instead.
+- Code splitting is achieved with the Babel config mentioned above and `react-imported.component`. Check the example frontend app for usage.
+- We also setup `storybook` to mantain the ocasional styleguide. It's configured for React, but again, can be used with other frontend library or framework.
 
 ## Backend
 The only backend logic present is the user authentication. We created a custom session controller to handle logins and logouts using the Sorcery gem. By default the Sorcery gem only:
@@ -55,10 +54,10 @@ Administrate is also installed, allowing users with the admin role to create acc
 ## Testing
 
 - Uses Rspec as a testing framework, using FactoryBot and Faker to generate records for testing
-- Feature/Integration tests interacting with the Webpacker bundle using Capybara and Chromedriver
+- Feature tests interacting with the Webpacker bundle using Capybara and Chromedriver
 - Sorcery backdoor to bypass authentication during feature tests
 
-Run the script `bin/local-ci` to run all tests, linters. It's a copy of what you should do on your CI system.
+Run the script `bin/ci` to run all tests, linters. It's a copy of what you should do on your CI system.
 
 # Developing
 
@@ -66,8 +65,7 @@ Run `bin/setup` to get everything up and running. Then `bin/server` to start ham
 
 Also don't forget to setup the default admin user with `rake populate:admin_user`. The default credentials are `admin@mail.com`, the password being `foobar`.
 
-`react-hot-loader` should reload everything you need as you edit stuff in the `frontend` folder. On the Rails side, everything is interpreted live, so no need to restart the server every time you change stuff.
-
+`react-hot-loader` should reload everything you need as you edit stuff in the `frontend` folder. On the Rails side, everything is interpreted live, so no need to restart the server every time you change code, unless you change configs or initializers.
 
 # About
 
