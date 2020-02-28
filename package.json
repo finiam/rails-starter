@@ -50,7 +50,7 @@
     "@storybook/addons": "^5.3.13",
     "@storybook/cli": "^5.3.13",
     "@storybook/react": "^5.3.13",
-    "babel-eslint": "^10.0.3",
+    "babel-eslint": "^10.1.0",
     "babel-jest": "^25.1.0",
     "dotenv-webpack": "^1.7.0",
     "eslint": "^6.8.0",
