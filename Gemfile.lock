@@ -1,50 +1,3 @@
-GIT
-  remote: https://github.com/rspec/rspec-core.git
-  revision: da87aa0c5f25a6e6f2db6f0c8fb2a04625b80ac6
-  branch: master
-  specs:
-    rspec-core (3.10.0.pre)
-      rspec-support (= 3.10.0.pre)
-
-GIT
-  remote: https://github.com/rspec/rspec-expectations.git
-  revision: 866dc56065e10ddfded0078a9a108c7d115ed1ed
-  branch: master
-  specs:
-    rspec-expectations (3.10.0.pre)
-      diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (= 3.10.0.pre)
-
-GIT
-  remote: https://github.com/rspec/rspec-mocks.git
-  revision: ae6e11d7f5100146c4b58b165975a29e2ccc60db
-  branch: master
-  specs:
-    rspec-mocks (3.10.0.pre)
-      diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (= 3.10.0.pre)
-
-GIT
-  remote: https://github.com/rspec/rspec-rails.git
-  revision: 9ab269052873c241a31404bc3bf8e672f9cf9586
-  branch: master
-  specs:
-    rspec-rails (4.0.0.pre)
-      actionpack (>= 4.2)
-      activesupport (>= 4.2)
-      railties (>= 4.2)
-      rspec-core (= 3.10.0.pre)
-      rspec-expectations (= 3.10.0.pre)
-      rspec-mocks (= 3.10.0.pre)
-      rspec-support (= 3.10.0.pre)
-
-GIT
-  remote: https://github.com/rspec/rspec-support.git
-  revision: 9cec8e858228ee1d1395e4e6186ac39c2a83d705
-  branch: master
-  specs:
-    rspec-support (3.10.0.pre)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -275,8 +228,25 @@ GEM
     rb-readline (0.5.5)
     regexp_parser (1.6.0)
     rexml (3.2.4)
+    rspec-core (3.9.1)
+      rspec-support (~> 3.9.1)
+    rspec-expectations (3.9.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.9.0)
+    rspec-mocks (3.9.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.9.0)
+    rspec-rails (3.9.1)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (~> 3.9.0)
+      rspec-expectations (~> 3.9.0)
+      rspec-mocks (~> 3.9.0)
+      rspec-support (~> 3.9.0)
     rspec-retry (0.6.2)
       rspec-core (> 3.3)
+    rspec-support (3.9.2)
     rubocop (0.80.1)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
@@ -368,12 +338,8 @@ DEPENDENCIES
   rack_session_access
   rails (~> 6.0.2)
   rb-readline
-  rspec-core!
-  rspec-expectations!
-  rspec-mocks!
-  rspec-rails!
+  rspec-rails (~> 3.x)
   rspec-retry
-  rspec-support!
   rubocop
   rubocop-performance
   rubocop-rails
