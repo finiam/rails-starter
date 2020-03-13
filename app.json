@@ -1,0 +1,26 @@
+{
+  "addons": [
+    {
+      "plan": "heroku-postgresql"
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-ruby"
+    }
+  ],
+  "env": {
+    "SECRET_KEY_BASE": {
+      "generator": "secret"
+    }
+  },
+  "formation": {},
+  "name": "aurora-rails-starter",
+  "scripts": {
+    "postdeploy": "bundle exec rake populate:admin_user"  
+  },
+  "stack": "heroku-18"
+}
