@@ -19,7 +19,7 @@ group :development, :test do
   gem "pry-byebug"
   gem "pry-rails"
   gem "rb-readline"
-  gem "rspec-rails", "~> 4.x"
+  gem "rspec-rails", "~> 4.rc1"
   gem "rspec-retry"
 end
 
