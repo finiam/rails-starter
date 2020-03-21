@@ -74,5 +74,3 @@ Also don't forget to setup the default admin user with `rake populate:admin_user
 # About
 
 This starter kit is maintained by [Aurora](http://auroradigital.co).
-
-If you need to contact the maintainer use or <a href="mailto:contact@auroradigital.co">reach out to us</a> if you don't have access.
