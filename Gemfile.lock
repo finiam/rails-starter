@@ -336,6 +336,7 @@ DEPENDENCIES
   factory_bot_rails
   faker
   foreman
+  listen (>= 3.0.5, < 3.3)
   pg (>= 0.18, < 2.0)
   pry-byebug
   pry-rails
