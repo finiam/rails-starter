@@ -38,11 +38,10 @@ end
 group :test do
   gem "capybara"
   gem "database_cleaner"
-  gem "differ"
   gem "rack_session_access"
   gem "selenium-webdriver"
-  gem "shoulda-callback-matchers"
   gem "shoulda-matchers"
+  gem "super_diff"
 end
 
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
