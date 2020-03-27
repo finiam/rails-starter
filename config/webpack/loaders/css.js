@@ -1,9 +1,4 @@
-/*
-  This small hack allows us to use the
-  mini-css-extract-plugin from @rails/webpacker,
-  to resolve version conflicts
-*/
-const MiniCssExtractPlugin = require("@rails/webpacker/node_modules/mini-css-extract-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   test: /\.css$/,
