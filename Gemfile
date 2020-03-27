@@ -26,7 +26,6 @@ end
 group :development do
   gem "better_errors"
   gem "foreman"
-  gem "listen", ">= 3.0.5", "< 3.3"
   gem "rubocop"
   gem "rubocop-performance"
   gem "rubocop-rails"
@@ -38,10 +37,9 @@ end
 group :test do
   gem "capybara"
   gem "database_cleaner"
-  gem "differ"
   gem "rack_session_access"
   gem "selenium-webdriver"
-  gem "shoulda-callback-matchers"
+  gem "super_diff"
   gem "shoulda-matchers"
 end
 
