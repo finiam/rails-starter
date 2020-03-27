@@ -54,6 +54,7 @@ If you want more Sorcery modules, check out their documentation and implement it
 
 Administrate is also installed, allowing users with the admin role to create accounts, as user registrations are disabled by default. The admin dashboard is present at `/admin`.
 
+We don't include CORS configuration as this starter is to be used on a single domain. If you need to enable CORS please install and configure the `rack-cors` gem. Even with the default restrictive behavior from Rails you can still make server-to-server requests, and most native mobile apps can still make requests (webview technologies like Ionic and PhoneGap will need CORS).
 
 ## Testing
 
