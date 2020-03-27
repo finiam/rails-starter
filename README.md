@@ -54,6 +54,7 @@ If you want more Sorcery modules, check out their documentation and implement it
 
 Administrate is also installed, allowing users with the admin role to create accounts, as user registrations are disabled by default. The admin dashboard is present at `/admin`.
 
+We configure this on `application.rb`, you can also define on `development.rb`, `test.rb` and `production.rb` files. If your API is going to be exclusively
 
 ## Testing
 
