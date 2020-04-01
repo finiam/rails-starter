@@ -42,6 +42,8 @@ We use React as our UI framework, but that can be replaced if need be. With our 
 
 This starter is tested in Chrome, Firefox, Safari and IE11, but we can safely assume that it works in all browsers covered by our `browserslist` specification. We include both `core-js` and `regenerator-runtime` on our frontend bundle. Babel then converts that on individual polyfills, so we only include polyfills we actually need.
 
+Check used polyfills on `frontend/shared/polyfills.js`.
+
 ## Backend
 The only backend logic present is the user authentication. We created a custom session controller to handle logins and logouts using the Sorcery gem. By default the Sorcery gem only:
 - protects against brute force attacks
