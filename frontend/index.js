@@ -1,3 +1,5 @@
+// Polyfills should be imported before EVERYTHING
+import "root/shared/polyfills";
 import { hot } from "react-hot-loader/root";
 import React from "react";
 import ReactDOM from "react-dom";
