@@ -37,6 +37,8 @@
     "postcss-preset-env": "^6.7.0",
     "precss": "^4.0.0",
     "prop-types": "^15.7.2",
+    "query-string": "^6.11.1",
+    "querystringify": "^2.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-hot-loader": "^4.12.19",
@@ -44,6 +46,7 @@
     "react-router-dom": "^5.1.2",
     "regenerator-runtime": "^0.13.5",
     "style-loader": "^1.1.2",
+    "unfetch": "^4.1.0",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
   },

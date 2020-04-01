@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import asyncImport from "react-imported-component";
 
-import setupCsrf from "root/api/setupCsrf";
 import { AuthProvider, useAuth } from "root/hooks/useAuth";
 
 // Route code splitting, as an example
@@ -23,10 +22,6 @@ function InnerApp() {
 }
 
 function App() {
-  useEffect(() => {
-    setupCsrf();
-  }, []);
-
   return (
     <React.StrictMode>
       <AuthProvider>
