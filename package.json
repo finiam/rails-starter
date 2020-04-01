@@ -37,7 +37,6 @@
     "postcss-preset-env": "^6.7.0",
     "precss": "^4.0.0",
     "prop-types": "^15.7.2",
-    "query-string": "^6.11.1",
     "querystringify": "^2.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
