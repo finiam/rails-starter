@@ -14,8 +14,11 @@ class UserDashboard < Administrate::BaseDashboard
     name: Field::String,
     email: Field::String,
     password: Field::String,
-    last_login_ip: Field::String,
+    password_confirmation: Field::String,
     last_login_at: Field::String,
+    last_logout_at: Field::String,
+    last_activity_at: Field::String,
+    invalidate_sessions_before: Field::String,
     role: EnumField
   }.freeze
 
@@ -37,8 +40,10 @@ class UserDashboard < Administrate::BaseDashboard
     id
     name
     email
-    last_login_ip
     last_login_at
+    last_logout_at
+    last_activity_at
+    invalidate_sessions_before
     created_at
     updated_at
   ].freeze
@@ -50,6 +55,7 @@ class UserDashboard < Administrate::BaseDashboard
     name
     email
     password
+    password_confirmation
     role
   ].freeze
 

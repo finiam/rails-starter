@@ -1,7 +1,10 @@
 class User < ApplicationRecord
   authenticates_with_sorcery!
 
-  validates :email, presence: true, uniqueness: true
+  validates :email,
+    presence: true,
+    uniqueness: true,
+    format: { with: URI::MailTo::EMAIL_REGEXP }
   validates :name, presence: true
   validate :validate_password_confirmation
 

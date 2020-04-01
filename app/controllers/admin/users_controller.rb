@@ -18,7 +18,10 @@ module Admin
     def filtered_resource_params
       custom_resource_params = resource_params
 
-      custom_resource_params.delete("password") if custom_resource_params["password"] == ""
+      if custom_resource_params["password"] == ""
+        custom_resource_params.delete("password")
+        custom_resource_params.delete("password_confirmation")
+      end
 
       custom_resource_params
     end
