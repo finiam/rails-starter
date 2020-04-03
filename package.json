@@ -50,7 +50,7 @@
     "webpack-cli": "^3.3.11"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^5.3.14",
+    "@storybook/addon-actions": "^5.3.18",
     "@storybook/addon-links": "^5.3.14",
     "@storybook/addons": "^5.3.14",
     "@storybook/cli": "^5.3.14",
