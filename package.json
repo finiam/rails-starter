@@ -53,7 +53,7 @@
     "@storybook/addon-actions": "^5.3.14",
     "@storybook/addon-links": "^5.3.14",
     "@storybook/addons": "^5.3.14",
-    "@storybook/cli": "^5.3.14",
+    "@storybook/cli": "^5.3.18",
     "@storybook/react": "^5.3.14",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^25.2.3",
