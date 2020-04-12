@@ -24,7 +24,7 @@ export default async function easyFetch(
     method: "GET",
     headers: { ...defaultHeaders(), headers },
     body: body ? JSON.stringify(body) : null,
-    ...customConfig
+    ...customConfig,
   };
   const query = params ? querystringify.stringify(params, true) : "";
   const response = await window.fetch(`${endpoint}${query}`, config);
@@ -32,7 +32,7 @@ export default async function easyFetch(
   const result = {
     status: response.status,
     headers: response.headers,
-    ...(await parseResponse(response))
+    ...(await parseResponse(response)),
   };
 
   if (!response.ok) throw result;
@@ -43,7 +43,7 @@ export default async function easyFetch(
 function defaultHeaders() {
   return {
     "X-CSRF-Token": getCsrfToken(),
-    "Content-Type": "application/json"
+    "Content-Type": "application/json",
   };
 }
 
