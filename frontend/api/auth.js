@@ -9,7 +9,7 @@ export async function getSession() {
 export async function login(email, password) {
   const response = await easyFetch("/session", {
     method: "POST",
-    body: { email, password }
+    body: { email, password },
   });
 
   return response;

@@ -7,7 +7,7 @@
   },
   "scripts": {
     "lint": "eslint --ext js,jsx frontend app/assets",
-    "lint-styles": "stylelint frontend/**/* app/assets/**/*",
+    "lint-styles": "stylelint 'frontend/**/*' 'app/assets/**/*'",
     "test": "BABEL_ENV=test NODE_ENV=test jest frontend",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"

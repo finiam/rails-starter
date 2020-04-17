@@ -54,11 +54,11 @@ export const AuthProvider = ({ children }) => {
 };
 
 AuthProvider.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 AuthProvider.defaultProps = {
-  children: null
+  children: null,
 };
 
 export const useAuth = () => useContext(AuthContext);
