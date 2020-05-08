@@ -20,7 +20,7 @@
     "@babel/preset-react": "^7.9.4",
     "@hot-loader/react-dom": "^16.12.0",
     "@rails/actioncable": "^6.0.2",
-    "@rails/activestorage": "^6.0.2",
+    "@rails/activestorage": "^6.0.3",
     "@rails/webpacker": "^5.1.1",
     "@testing-library/react": "^10.0.4",
     "axios": "^0.19.2",
