@@ -22,7 +22,7 @@
     "@rails/actioncable": "^6.0.3",
     "@rails/activestorage": "^6.0.3",
     "@rails/webpacker": "^5.1.1",
-    "@testing-library/react": "^10.0.4",
+    "@testing-library/react": "^10.2.0",
     "axios": "^0.19.2",
     "babel-loader": "^8.1.0",
     "core-js": "^3.6.5",
