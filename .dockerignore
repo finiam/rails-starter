@@ -1,4 +1,5 @@
 .semaphore/*
+.github/*
 .storybook/*
 node_modules/*
 tmp/*
