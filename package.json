@@ -47,7 +47,7 @@
     "style-loader": "^1.2.1",
     "unfetch": "^4.1.0",
     "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.12"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^5.3.19",
