@@ -41,7 +41,6 @@ group :test do
   gem "rack_session_access"
   gem "selenium-webdriver"
   gem "shoulda-matchers"
-  gem "super_diff"
 end
 
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
