@@ -43,7 +43,7 @@
     "react-hot-loader": "^4.12.21",
     "react-imported-component": "^6.3.5",
     "react-router-dom": "^5.2.0",
-    "regenerator-runtime": "^0.13.5",
+    "regenerator-runtime": "^0.13.7",
     "style-loader": "^1.2.1",
     "unfetch": "^4.1.0",
     "webpack": "^4.43.0",
