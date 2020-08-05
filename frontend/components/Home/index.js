@@ -8,7 +8,7 @@ import styles from "./index.css";
 
 const Text = asyncImport(() => import("root/components/Text"));
 
-function Home() {
+export default function Home() {
   const { user, handleLogout } = useAuth();
 
   return (
@@ -31,5 +31,3 @@ function Home() {
     </div>
   );
 }
-
-export default Home;

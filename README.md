@@ -72,7 +72,9 @@ Run `bin/setup` to get everything up and running. Then `bin/server` to start ham
 
 Also don't forget to setup the default admin user with `rake populate:admin_user`. The default credentials are `admin@mail.com`, the password being `foobar`.
 
-`react-hot-loader` should reload everything you need as you edit stuff in the `frontend` folder. On the Rails side, everything is interpreted live, so no need to restart the server every time you change code, unless you change configs or initializers.
+`react-refresh` should reload everything you need as you edit stuff in the `frontend` folder. On the Rails side, everything is interpreted live, so no need to restart the server every time you change code, unless you change configs or initializers.
+
+**DISCLAIMER** Check the `react-refresh` docs on [this link](https://reactnative.dev/docs/fast-refresh) (yes it's from `reactnative`, trust us) for limitations on the hot loader. For example, only function components work now.
 
 ## Production
 
