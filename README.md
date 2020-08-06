@@ -74,6 +74,23 @@ Also don't forget to setup the default admin user with `rake populate:admin_user
 
 `react-hot-loader` should reload everything you need as you edit stuff in the `frontend` folder. On the Rails side, everything is interpreted live, so no need to restart the server every time you change code, unless you change configs or initializers.
 
+## Production
+
+This starter is made with Heroku in mind, but if you want to deploy elsewhere we recommend the included Dockerfile (which is meant for production and not development). The Docker image of this repo uses Alpine Linux to produce a very small image. It builds the backend and the frontend serving the assets from the Rails app itself.
+
+You should deploy the image made by this repo to DockerHub, or any other container registry, then on the production server just pull it there. There is a included `docker-compose.yml`. Just change the `build: .` line with `image: your-docker-hub-image` on production.
+There are a couple of important environment variables that need changing, namely the postgres password and Rails secret key base. Use a secure password generator for those.
+
+Then do the usual:
+```
+docker-compose pull
+docker-compose stop # to stop existing containers
+docker-compose up -d
+docker-compose exec web rake db:migrate
+```
+
+You can do the usual `rails console` and regular rake tasks using `docker-compose exec web <your command>`.
+
 # About
 
 This starter kit is maintained by [Aurora](http://auroradigital.co).
