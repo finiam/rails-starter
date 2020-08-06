@@ -13,10 +13,10 @@ module.exports = {
       options: {
         modules: {
           mode: "local",
-          localIdentName: "[hash:8]_[folder]_[name]_[local]"
-        }
-      }
+          localIdentName: "[hash:8]_[folder]_[name]_[local]",
+        },
+      },
     },
-    "postcss-loader"
-  ]
+    "postcss-loader",
+  ],
 };

@@ -6,7 +6,7 @@
     "node": "12.x"
   },
   "scripts": {
-    "lint": "eslint --ext js,jsx frontend app/assets",
+    "lint": "eslint --ext js,jsx frontend app/assets .storybook config",
     "lint-styles": "stylelint 'frontend/**/*' 'app/assets/**/*'",
     "test": "BABEL_ENV=test NODE_ENV=test jest frontend",
     "storybook": "start-storybook -p 6006",

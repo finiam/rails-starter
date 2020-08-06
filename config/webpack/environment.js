@@ -8,29 +8,29 @@ const path = require("path");
 const loadersDir = join(__dirname, "loaders");
 const sharedConfig = {
   stats: {
-    children: false
+    children: false,
   },
 
   module: {
     // Import loaders from our loaders folder
-    rules: sync(join(loadersDir, "*.js")).map(loader => require(loader))
+    rules: sync(join(loadersDir, "*.js")).map((loader) => require(loader)),
   },
 
   resolve: {
     alias: {
       root: path.resolve("./frontend"),
-      "react-dom": "@hot-loader/react-dom"
-    }
+      "react-dom": "@hot-loader/react-dom",
+    },
   },
 
   devServer: {
-    clientLogLevel: "info"
+    clientLogLevel: "info",
   },
 
   // Fix for SSR when using async components
   output: {
-    globalObject: 'this'
-  }
+    globalObject: "this",
+  },
 };
 
 /**

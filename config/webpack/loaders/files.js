@@ -8,8 +8,8 @@ module.exports = {
         name:
           process.env.NODE_ENV === "production"
             ? "[name]-[hash].[ext]"
-            : "[name].[ext]"
-      }
-    }
-  ]
+            : "[name].[ext]",
+      },
+    },
+  ],
 };

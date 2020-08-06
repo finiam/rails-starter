@@ -8,5 +8,5 @@ const nodeModules = new RegExp(
 module.exports = {
   test: /\.js|.jsx(\.erb)?$/,
   exclude: [nodeModules, /.+\.stories\.js$/, /.+\.test\.js/],
-  loader: "babel-loader"
+  loader: "babel-loader",
 };
