@@ -19,7 +19,6 @@ const sharedConfig = {
   resolve: {
     alias: {
       root: path.resolve("./frontend"),
-      "react-dom": "@hot-loader/react-dom",
     },
   },
 

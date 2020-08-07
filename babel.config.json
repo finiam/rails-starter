@@ -23,7 +23,7 @@
     "development": {
       "plugins": [
         "@babel/plugin-transform-react-jsx-source",
-        "react-hot-loader/babel"
+        "react-refresh/babel"
       ]
     }
   }
