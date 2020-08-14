@@ -25,6 +25,9 @@
         "@babel/plugin-transform-react-jsx-source",
         "react-refresh/babel"
       ]
+    },
+    "stories": {
+      "plugins": ["@babel/plugin-transform-react-jsx-source"]
     }
   }
 }
