@@ -51,7 +51,7 @@
     "@pmmmwh/react-refresh-webpack-plugin": "^0.4.1",
     "@storybook/addon-actions": "^5.3.19",
     "@storybook/addon-links": "^5.3.19",
-    "@storybook/addons": "^5.3.19",
+    "@storybook/addons": "^6.0.6",
     "@storybook/cli": "^5.3.19",
     "@storybook/react": "^5.3.19",
     "babel-eslint": "^10.1.0",
