@@ -50,7 +50,7 @@
   "devDependencies": {
     "@pmmmwh/react-refresh-webpack-plugin": "^0.4.1",
     "@storybook/addon-essentials": "^6.0.7",
-    "@storybook/addon-links": "^6.0.7",
+    "@storybook/addon-links": "^6.0.16",
     "@storybook/addons": "^6.0.7",
     "@storybook/cli": "^6.0.7",
     "@storybook/react": "^6.0.7",
