@@ -46,7 +46,7 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   # Log errors during testing
-  config.logger = Logger.new(STDOUT)
+  config.logger = Logger.new($stdout)
   config.log_level = :error
 
   config.middleware.use RackSessionAccess::Middleware
