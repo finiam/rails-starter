@@ -54,7 +54,7 @@
     "@storybook/cli": "^6.0.22",
     "@storybook/react": "^6.0.22",
     "babel-eslint": "^10.1.0",
-    "babel-jest": "^26.3.0",
+    "babel-jest": "^26.5.2",
     "dotenv-webpack": "^3.0.0",
     "eslint": "^7.10.0",
     "eslint-config-airbnb": "^18.2.0",
