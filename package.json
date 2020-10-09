@@ -47,7 +47,7 @@
     "@storybook/addon-essentials": "^6.0.22",
     "@storybook/addon-links": "^6.0.22",
     "@storybook/addons": "^6.0.22",
-    "@storybook/cli": "^6.0.22",
+    "@storybook/cli": "^6.0.26",
     "@storybook/react": "^6.0.22",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.3.0",
