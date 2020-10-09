@@ -31,12 +31,11 @@ The most specialized part of this boilerplate is the frontend build, which is va
 
 We use React as our UI framework, but that can be replaced if need be. With our Webpacker config, the following features are enabled:
 
-- CSS modules. Also includes CSS separation during the production phase, splitting all CSS to a separate bundle
-- All CSS is processed using PostCSS, our plugins allow you to write "SASS like" stylesheets. We also have some experimental features via `postcss-preset-env`. Check the `postcss.config.js` for the plugins in use.
-- Some special rules we use are enabled on the Babel config. **Class properties**, **react-imported-component** which allows us to us the package with the same name to async load React components, and **legacy decorators** for the ocasional high order component. Also, the base `preset-react` and `preset-env` are also enabled. Check `.browserlistrc` to check which browsers are being targeted.
-- `babel-loader` and `file-loader` are configured in the `config/webpack/loaders` folder. You can add more loaders here if needed and they will get loaded by `webpacker`. We deleted all the loaders that come with `webpacker` by default, using our own instead.
-- Code splitting is achieved with the Babel config mentioned above and `react-imported.component`. Check the example frontend app for usage.
-- We also setup `storybook` to mantain the ocasional styleguide. It's configured for React, but again, can be used with other frontend library or framework.
+- All of the frontend building is done by [Webpacker](https://github.com/rails/webpacker). Check their docs for info.
+- Some special rules we use are enabled on the Babel config. **Class properties**, **react-imported-component** which allows us to use the package with the same name to async load React components, and **legacy decorators** for the ocasional high order component. Also, the base `preset-react` and `preset-env` are also enabled. Check `.browserlistrc` to check which browsers are being targeted.
+- Code splitting is achieved with the Babel config mentioned above and `react-imported-component`. Check the example frontend app for usage.
+- `storybook` to mantain the ocasional styleguide. It's configured for React, but again, can be used with other frontend library or framework.
+- Optional `node_modules` transpilation. Visit the `nodeModules.js` on the config folder to add dependencies to the allowlist. Those dependencies will be transpiled.
 
 ### Browser support
 
