@@ -10,7 +10,7 @@
     "lint-styles": "stylelint 'frontend/**/*' 'app/assets/**/*'",
     "test": "BABEL_ENV=test NODE_ENV=test jest frontend",
     "storybook": "BABEL_ENV=stories start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "BABEL_ENV=stories build-storybook"
   },
   "dependencies": {
     "@babel/core": "^7.12.1",
