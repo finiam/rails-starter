@@ -10,8 +10,8 @@ You can replace the app name `railsstarter` with your own name, and use it to se
 
 To run this project you will need the following tools and runtimes:
 
-- Ruby 2.6.6
-- Node 10.\*
+- Ruby 2.7.1
+- Node 12.\*
 - Postgres 10 and greater
 - Chromedriver
 
