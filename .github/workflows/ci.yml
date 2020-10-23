@@ -25,7 +25,7 @@ jobs:
           POSTGRES_PASSWORD: postgres
           POSTGRES_USERNAME: postgres
           POSTGRES_HOSTNAME: 0.0.0.0
-          POSTGRES_DB: rails_starter
+          POSTGRES_DB: rails_starter_test
 
     steps:
       - uses: actions/checkout@v1
