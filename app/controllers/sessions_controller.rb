@@ -22,6 +22,7 @@ class SessionsController < ApplicationController
   def destroy
     invalidate_active_sessions! if params[:everywhere] == "true"
     logout
+    form_authenticity_token
 
     render json: session[:_csrf_token]
   end
