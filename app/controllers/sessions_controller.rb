@@ -23,7 +23,7 @@ class SessionsController < ApplicationController
     invalidate_active_sessions! if params[:everywhere] == "true"
     logout
 
-    head :ok
+    render json: session[:_csrf_token]
   end
 
   private
