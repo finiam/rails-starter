@@ -49,7 +49,7 @@ jobs:
           path: vendor/bundle
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
           restore-keys: |
-            ${{ runner.os }}-gems-v1
+            ${{ runner.os }}-gems-
 
       - name: Cache node modules
         uses: actions/cache@v2
@@ -57,7 +57,7 @@ jobs:
             path: node_modules
             key: ${{ runner.os }}-build-node_modules-${{ hashFiles('**/yarn.lock') }}
             restore-keys: |
-              ${{ runner.os }}-node-v1
+              ${{ runner.os }}-node-
 
       - name: Install deps
         run: |
