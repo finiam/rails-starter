@@ -34,7 +34,6 @@ We use React as our UI framework, but that can be replaced if need be. With our 
 - All of the frontend building is done by [Webpacker](https://github.com/rails/webpacker). Check their docs for info.
 - Some special rules we use are enabled on the Babel config. **Class properties**, **react-imported-component** which allows us to use the package with the same name to async load React components, and **legacy decorators** for the ocasional high order component. Also, the base `preset-react` and `preset-env` are also enabled. Check `.browserlistrc` to check which browsers are being targeted.
 - Code splitting is achieved with the Babel config mentioned above and `react-imported-component`. Check the example frontend app for usage.
-- `storybook` to mantain the ocasional styleguide. It's configured for React, but again, can be used with other frontend library or framework.
 - Optional `node_modules` transpilation. Visit the `nodeModules.js` on the config folder to add dependencies to the allowlist. Those dependencies will be transpiled.
 
 ### Browser support
