@@ -24,7 +24,7 @@ group :development, :test do
 end
 
 group :development do
-  gem "better_errors", "2.8.3"
+  gem "better_errors", "2.9.0"
   gem "foreman"
   gem "listen", ">= 3.0.5", "< 3.3"
   gem "rubocop"
