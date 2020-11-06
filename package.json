@@ -40,7 +40,7 @@
     "webpack-cli": "^3.3.12"
   },
   "devDependencies": {
-    "@pmmmwh/react-refresh-webpack-plugin": "^0.4.2",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.1",
     "dotenv-webpack": "^4.0.0",
