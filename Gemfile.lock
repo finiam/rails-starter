@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/Sorcery/sorcery
+  revision: d16fffa6e0eceb1b2e7b0337d53faab8227c01f0
+  specs:
+    sorcery (0.15.0)
+      bcrypt (~> 3.1)
+      oauth (~> 0.4, >= 0.4.4)
+      oauth2 (~> 1.0, >= 0.8.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -115,9 +124,11 @@ GEM
       railties (>= 5.0.0)
     faker (2.15.1)
       i18n (>= 1.6, < 2)
-    faraday (1.1.0)
+    faraday (1.3.0)
+      faraday-net_http (~> 1.0)
       multipart-post (>= 1.2, < 3)
       ruby2_keywords
+    faraday-net_http (1.0.0)
     ffi (1.14.2)
     foreman (0.87.2)
     globalid (0.4.2)
@@ -284,10 +295,6 @@ GEM
     semantic_range (2.3.0)
     shoulda-matchers (4.4.1)
       activesupport (>= 4.2.0)
-    sorcery (0.15.0)
-      bcrypt (~> 3.1)
-      oauth (~> 0.4, >= 0.4.4)
-      oauth2 (~> 1.0, >= 0.8.0)
     spring (2.1.1)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -350,7 +357,7 @@ DEPENDENCIES
   sassc (~> 2.4.0)
   selenium-webdriver
   shoulda-matchers
-  sorcery
+  sorcery!
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
@@ -358,7 +365,7 @@ DEPENDENCIES
   webpacker (~> 5.2.1)
 
 RUBY VERSION
-   ruby 2.7.2p137
+   ruby 3.0.0p0
 
 BUNDLED WITH
-   2.1.4
+   2.2.3
