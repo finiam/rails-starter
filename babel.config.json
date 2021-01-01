@@ -7,7 +7,7 @@
         "corejs": 3
       }
     ],
-    "@babel/preset-react"
+    ["@babel/preset-react", { "runtime": "automatic" }]
   ],
   "plugins": [
     "react-imported-component/babel",
@@ -21,10 +21,7 @@
   ],
   "env": {
     "development": {
-      "plugins": [
-        "@babel/plugin-transform-react-jsx-source",
-        "react-refresh/babel"
-      ]
+      "plugins": ["react-refresh/babel"]
     }
   }
 }
