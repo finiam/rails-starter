@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/Sorcery/sorcery
-  revision: d16fffa6e0eceb1b2e7b0337d53faab8227c01f0
+  revision: 443e614e3d2dfc9d7dd805c4a69f8e1c820c7e76
   specs:
     sorcery (0.15.0)
       bcrypt (~> 3.1)
