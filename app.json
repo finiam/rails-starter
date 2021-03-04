@@ -18,9 +18,9 @@
     }
   },
   "formation": {},
-  "name": "aurora-rails-starter",
+  "name": "finiam-rails-starter",
   "scripts": {
-    "postdeploy": "bundle exec rake populate:admin_user"  
+    "postdeploy": "bundle exec rake populate:admin_user"
   },
   "stack": "heroku-18"
 }

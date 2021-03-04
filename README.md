@@ -1,4 +1,4 @@
-# Aurora Rails Starter
+# Finiam Rails Starter
 
 This repo contains our basic Rails and React boilerplate. Most of our projects revolved around this setup, with Postgres as a database, Rails as our backend framework with a React SPA at the front.
 
@@ -93,4 +93,4 @@ You can do the usual `rails console` and regular rake tasks using `docker-compos
 
 # About
 
-This starter kit is maintained by [Aurora](http://auroradigital.co).
+This starter kit is maintained by [Finiam](http://finiam.com).
