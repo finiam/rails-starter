@@ -10,7 +10,7 @@ gem "puma", "~> 5.2"
 gem "rails", "~> 6.1.2"
 gem "sassc", "~> 2.4.0"
 gem "sorcery", git: "https://github.com/Sorcery/sorcery"
-gem "webpacker", "~> 5.2.1"
+gem "webpacker", "6.0.0.beta.6"
 
 group :development, :test do
   gem "dotenv-rails"
