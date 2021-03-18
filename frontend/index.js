@@ -1,5 +1,3 @@
-// Polyfills should be imported before EVERYTHING
-import "root/shared/polyfills";
 import React from "react";
 import ReactDOM from "react-dom";
 
