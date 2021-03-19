@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/Sorcery/sorcery
-  revision: 43efa3329e61d3fff8a5233d9efdc90db6820362
+  revision: 58ff4ac8dbbbd5bb52e825c538621ec422793971
   specs:
     sorcery (0.16.0)
       bcrypt (~> 3.1)
@@ -179,7 +179,7 @@ GEM
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
     oauth (0.5.5)
-    oauth2 (1.4.4)
+    oauth2 (1.4.7)
       faraday (>= 0.8, < 2.0)
       jwt (>= 1.0, < 3.0)
       multi_json (~> 1.3)
