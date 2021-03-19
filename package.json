@@ -34,7 +34,7 @@
     "react-imported-component": "^6.4.1",
     "react-router-dom": "^5.2.0",
     "redaxios": "^0.4.1",
-    "webpack": "^5.11.0",
+    "webpack": "^5.26.3",
     "webpack-cli": "^4.2.0"
   },
   "devDependencies": {
