@@ -7,7 +7,7 @@ gem "administrate"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "pg", ">= 0.18", "< 2.0"
 gem "puma", "~> 5.2"
-gem "rails", "~> 6.1.2"
+gem "rails", "~> 6.1.3"
 gem "sassc", "~> 2.4.0"
 gem "sorcery", git: "https://github.com/Sorcery/sorcery"
 gem "webpacker", "6.0.0.beta.6"
@@ -26,7 +26,7 @@ end
 group :development do
   gem "better_errors", "2.9.1"
   gem "foreman"
-  gem "listen", ">= 3.0.5", "< 3.5"
+  gem "listen", ">= 3.0.5", "< 3.6"
   gem "rubocop"
   gem "rubocop-performance"
   gem "rubocop-rails"
