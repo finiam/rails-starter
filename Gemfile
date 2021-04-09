@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.0.0"
+ruby "3.0.1"
 
 gem "administrate"
 gem "bootsnap", ">= 1.1.0", require: false
@@ -9,7 +9,7 @@ gem "pg", ">= 0.18", "< 2.0"
 gem "puma", "~> 5.2"
 gem "rails", "~> 6.1.3"
 gem "sassc", "~> 2.4.0"
-gem "sorcery", git: "https://github.com/Sorcery/sorcery"
+gem "sorcery", "~> 0.16"
 gem "webpacker", "6.0.0.beta.6"
 
 group :development, :test do
