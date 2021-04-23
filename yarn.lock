@@ -1212,10 +1212,10 @@
   dependencies:
     spark-md5 "^3.0.0"
 
-"@rails/webpacker@^6.0.0-beta.6":
-  version "6.0.0-beta.6"
-  resolved "https://registry.yarnpkg.com/@rails/webpacker/-/webpacker-6.0.0-beta.6.tgz#180d3297d466168b15a0bc089f5de8c4977a00c3"
-  integrity sha512-rM99yqoBwSZtH4KgWtG1mIZaNQFAPYR/eI+8/COXkbA0taEd0vmAZ70TkLT+gxFenrjLHW32v0/42HEKICzO/w==
+"@rails/webpacker@^6.0.0-beta.7":
+  version "6.0.0-beta.7"
+  resolved "https://registry.yarnpkg.com/@rails/webpacker/-/webpacker-6.0.0-beta.7.tgz#5deaadc5bf962c5e031e6d038bbb5d4a591c07a6"
+  integrity sha512-ZnKSixM+XKKTjRBL5mR5b2ZZVtqYGdPP5MAn4d8aehTApu51w8DIFV+9dC4WI59mIjAOsc2411rNvkX/eLX5XQ==
   dependencies:
     "@babel/core" "^7.12.9"
     "@babel/plugin-proposal-class-properties" "^7.12.1"
