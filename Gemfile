@@ -6,7 +6,7 @@ ruby "3.0.1"
 gem "administrate"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "pg", ">= 0.18", "< 2.0"
-gem "puma", "~> 5.3"
+gem "puma", "~> 5.4"
 gem "rails", "~> 6.1.4"
 gem "sassc", "~> 2.4.0"
 gem "sorcery", "~> 0.16"
