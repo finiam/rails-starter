@@ -29,12 +29,12 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.0.1
+          ruby-version: 3.0.2
 
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 14.16.0
+          node-version: 16.x
 
       - name: Setup Chromedriver
         uses: nanasess/setup-chromedriver@master

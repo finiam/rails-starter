@@ -16,7 +16,7 @@ AllCops:
     - "bin/**/*"
     - "vendor/**/*"
     - "node_modules/**/*"
-  TargetRubyVersion: 3.0.1
+  TargetRubyVersion: 3.0.2
   NewCops: enable
 
 Layout/LineLength:
