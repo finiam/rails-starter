@@ -148,7 +148,7 @@ GEM
       activerecord
       kaminari-core (= 1.2.1)
     kaminari-core (1.2.1)
-    listen (3.6.0)
+    listen (3.7.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     loofah (2.12.0)
@@ -341,7 +341,7 @@ DEPENDENCIES
   factory_bot_rails
   faker
   foreman
-  listen (>= 3.0.5, < 3.7)
+  listen (>= 3.0.5, < 3.8)
   pg (>= 0.18, < 2.0)
   pry-byebug
   pry-rails
