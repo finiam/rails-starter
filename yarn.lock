@@ -7460,10 +7460,10 @@ react-dom@^17.0.2:
     object-assign "^4.1.1"
     scheduler "^0.20.2"
 
-react-imported-component@^6.4.1:
-  version "6.4.1"
-  resolved "https://registry.yarnpkg.com/react-imported-component/-/react-imported-component-6.4.1.tgz#869b94ec05c1a50c5f0fb6ba9bc9cfd4b8ce603a"
-  integrity sha512-Q5MDi96zer8RhURCTtCwA0zUSQN5L7pCrnpThhyCtaS1Q+hUVH5i0evXym9CJsAaymgg6iu+IbBMdlVShIK+1Q==
+react-imported-component@^6.5.0:
+  version "6.5.0"
+  resolved "https://registry.yarnpkg.com/react-imported-component/-/react-imported-component-6.5.0.tgz#4705e1ca82368d676ba7d78ba1168559d49362ac"
+  integrity sha512-XlakWb/I9yEa8Vu8s3wm+unaAoyjOea1AtThx59lGsnj3ikNSmQvHWnaLobkjt/MsHkzlS3VYlK8qkLQUWf8VQ==
   dependencies:
     babel-plugin-macros "^2.6.1"
     crc-32 "^1.2.0"

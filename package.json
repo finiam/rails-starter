@@ -28,7 +28,7 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-imported-component": "^6.4.1",
+    "react-imported-component": "^6.5.0",
     "react-router-dom": "^5.3.0",
     "redaxios": "^0.4.1",
     "webpack": "^5.59.1",
