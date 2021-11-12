@@ -6,6 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <script>
+      const originalFetch = window.fetch;
+      let csrfToken = document.querySelector("meta[name=csrf-token]").content;
+
+      window.fetch = async (resource, options = {}) => {
+        const defaultHeaders = options.headers || {};
+        const fetchResult = await originalFetch(resource, {
+          ...options,
+          headers: { ...defaultHeaders, "X-CSRF-Token": csrfToken },
+        });
+
+        csrfToken = fetchResult.headers.get("X-CSRF-Token");
+
+        return fetchResult;
+      };
+    </script>
 
     <%= javascript_pack_tag 'application' %>
     <%= stylesheet_pack_tag 'application' %>
