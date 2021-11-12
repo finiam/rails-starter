@@ -1,7 +1,6 @@
 import React from "react";
 import asyncImport from "react-imported-component";
 import { Link } from "react-router-dom";
-
 import { useAuth } from "root/hooks/useAuth";
 
 import styles from "./index.module.css";
