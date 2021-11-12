@@ -1,29 +1,15 @@
 {
-  "plugins": [
-    "jsx-a11y",
-    "react-hooks",
-    "prettier"
-  ],
-  "parser": "babel-eslint",
-  "extends": [
-    "airbnb",
-    "prettier",
-    "plugin:jsx-a11y/recommended",
-  ],
+  "plugins": ["jsx-a11y", "react-hooks", "prettier"],
+  "parser": "@babel/eslint-parser",
+  "extends": ["airbnb", "prettier", "plugin:jsx-a11y/recommended"],
   "env": {
     "browser": true,
     "es6": true
   },
   "rules": {
     "prettier/prettier": "error",
-    "eol-last": [
-      "error",
-      "always"
-    ],
-    "curly": [
-      "error",
-      "multi-line"
-    ],
+    "eol-last": ["error", "always"],
+    "curly": ["error", "multi-line"],
     "padding-line-between-statements": [
       "error",
       {
@@ -43,25 +29,13 @@
       },
       {
         "blankLine": "always",
-        "prev": [
-          "const",
-          "let",
-          "var"
-        ],
+        "prev": ["const", "let", "var"],
         "next": "*"
       },
       {
         "blankLine": "any",
-        "prev": [
-          "const",
-          "let",
-          "var"
-        ],
-        "next": [
-          "const",
-          "let",
-          "var"
-        ]
+        "prev": ["const", "let", "var"],
+        "next": ["const", "let", "var"]
       }
     ],
     "no-param-reassign": [
@@ -81,17 +55,10 @@
     "id-length": [
       "error",
       {
-        "exceptions": [
-          "_",
-          "x",
-          "y"
-        ]
+        "exceptions": ["_", "x", "y"]
       }
     ],
-    "no-use-before-define": [
-      "error",
-      "nofunc"
-    ],
+    "no-use-before-define": ["error", "nofunc"],
     "no-unused-vars": [
       "error",
       {
@@ -109,21 +76,15 @@
     "import/no-unresolved": [
       2,
       {
-        "ignore": [
-          "root/"
-        ]
+        "ignore": ["root/"]
       }
     ],
     "import/extensions": "off",
     "jsx-a11y/anchor-is-valid": [
       "error",
       {
-        "components": [
-          "Link"
-        ],
-        "specialLink": [
-          "to"
-        ]
+        "components": ["Link"],
+        "specialLink": ["to"]
       }
     ],
     "jsx-a11y/href-no-hash": "off",
@@ -131,14 +92,15 @@
       2,
       {
         "required": {
-          "some": [
-            "nesting",
-            "id"
-          ]
+          "some": ["nesting", "id"]
         }
       }
     ],
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
+    "react-hooks/exhaustive-deps": "warn",
+    "react/function-component-definition": [
+      2,
+      { "namedComponents": "function-declaration" }
+    ]
   }
 }
