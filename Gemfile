@@ -10,7 +10,7 @@ gem "puma", "~> 5.5"
 gem "rails", "~> 6.1.4"
 gem "sassc", "~> 2.4.0"
 gem "sorcery", "~> 0.16"
-gem "webpacker", "6.0.0.rc.5"
+gem "webpacker", "6.0.0.rc.6"
 
 group :development, :test do
   gem "dotenv-rails"
