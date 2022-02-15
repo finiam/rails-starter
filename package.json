@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.16.0",
-    "@babel/preset-env": "^7.16.0",
+    "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.0",
     "@rails/actioncable": "^6.1.4",
     "@rails/activestorage": "^6.1.4",
