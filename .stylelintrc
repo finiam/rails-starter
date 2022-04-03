@@ -14,7 +14,7 @@
       "custom-properties",
       "declarations"
     ],
-    "no-missing-end-of-source-newline": 2,
+    "no-missing-end-of-source-newline": true,
     "order/properties-order": [
       {
         emptyLineBefore: "never",
