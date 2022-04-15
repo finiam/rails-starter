@@ -14,7 +14,7 @@
     "@rails/actioncable": "^6.1.5",
     "@rails/activestorage": "^6.1.5",
     "@rails/webpacker": "^6.0.0-rc.6",
-    "@testing-library/react": "^12.1.2",
+    "@testing-library/react": "^12.1.5",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^3.4.1",
