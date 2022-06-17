@@ -26,12 +26,10 @@ end
 group :development do
   gem "better_errors", "2.9.1"
   gem "foreman"
-  gem "listen", ">= 3.0.5", "< 3.8"
+  gem "listen", "~> 3.7", ">= 3.7.1"
   gem "rubocop"
   gem "rubocop-performance"
   gem "rubocop-rails"
-  gem "spring"
-  gem "spring-watcher-listen", "~> 2.0.0"
   gem "web-console", ">= 3.3.0"
 end
 
