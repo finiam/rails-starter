@@ -11,7 +11,7 @@
     "@babel/core": "^7.18.5",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.17.12",
-    "@rails/actioncable": "^6.1.5",
+    "@rails/actioncable": "^7.0.3",
     "@rails/activestorage": "^6.1.5",
     "@rails/webpacker": "^6.0.0-rc.6",
     "@testing-library/react": "^12.1.5",
