@@ -23,7 +23,6 @@ module.exports = {
       },
       stage: 3
     }),
-    require("postcss-color-function"),
     require("postcss-flexbugs-fixes"),
     process.env.NODE_ENV === "production"
       ? require("cssnano")({
